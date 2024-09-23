@@ -7,7 +7,7 @@
 
 import { shuffle } from "./utils.js";
 
-const PEOPLE_URL = "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
+const PEOPLE_URL = "https://github.com/saramff/face-recognition-images/blob/master/";
 const IMAGES_PER_GENDER = 5;
 
 const personImg = document.querySelector("#person-img");
