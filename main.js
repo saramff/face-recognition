@@ -7,7 +7,7 @@
 
 import { shuffle } from "./utils.js";
 
-const PEOPLE_URL = "https://github.com/saramff/face-recognition-images/blob/master/";
+const PEOPLE_URL = "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
 const IMAGES_PER_GENDER = 5;
 
 const personImg = document.querySelector("#person-img");
@@ -36,10 +36,10 @@ let wi = 0;
 let gender = Math.round(Math.random());
 
 if (gender === 0) {
-  imgSrc = `${PEOPLE_URL}men/man-${menArray[mi]}.jpg`;
+  imgSrc = `${PEOPLE_URL}men/man_${menArray[mi]}.jpg`;
   mi++;
 } else if (gender === 1) {
-  imgSrc = `${PEOPLE_URL}women/woman-${womenArray[wi]}.jpg`;
+  imgSrc = `${PEOPLE_URL}women/woman_${womenArray[wi]}.jpg`;
   wi++;
 }
 

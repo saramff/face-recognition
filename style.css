@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+}
+
+.img-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #person-img {
+        width: 500px;
+    }
+}
