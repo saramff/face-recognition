@@ -5,17 +5,17 @@
  */
 
 const PEOPLE_URL =
-  "https://raw.githubusercontent.com/Amaza-ing/images/refs/heads/master/people/";
-const IMAGES_PER_GENDER = 10;
+  "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
+const IMAGES_PER_GENDER = 5;
 
 // Create arrays from picture 1 to IMAGES_PER_GENDER
 const menImages = Array.from(
   { length: IMAGES_PER_GENDER },
-  (_, i) => `${PEOPLE_URL}/men/man-${i + 1}.PNG`
+  (_, i) => `${PEOPLE_URL}/men/man_${i + 1}.jpg`
 );
 const womenImages = Array.from(
   { length: IMAGES_PER_GENDER },
-  (_, i) => `${PEOPLE_URL}/women/woman-${i + 1}.PNG`
+  (_, i) => `${PEOPLE_URL}/women/woman_${i + 1}.jpg`
 );
 const peopleImages = [...menImages, ...womenImages];
 
@@ -47,11 +47,11 @@ timeline.push(welcome);
 let instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-        <p>In this experiment, you will see faces appear one by one in the center of the screen.</p>
-<p>We ask you to pay special attention to each of these faces.</p>
-<p>They will all pass automatically, one after the other.</p>
-<p>Press any key to begin.</p>
-      `,
+    <p>In this experiment, you will see faces appear one by one in the center of the screen.</p>
+    <p>We ask you to pay special attention to each of these faces.</p>
+    <p>They will all pass automatically, one after the other.</p>
+    <p>Press any key to begin.</p>
+  `,
   post_trial_gap: 500,
 };
 timeline.push(instructions);
@@ -59,8 +59,8 @@ timeline.push(instructions);
 /* define trial stimuli array for timeline variables */
 let test_stimuli = peopleImages.map((imgUrl) => {
   return {
-    stimulus: imgUrl,
-  response: "NO_KEYS"};
+    stimulus: imgUrl
+  };
 });
 
 /* define fixation and test trials */
@@ -78,21 +78,8 @@ let test = {
   type: jsPsychImageKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: "NO KEYS",
-   },
-
-/* define instructionsrecognition trial */
-let instructionsrecognition = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-        <p>Next, you will see a series of images with an object and a related sentence.</p>
-<p>You will need to decide whether the sentence is true or false.</p>
-<p>Press the letter A if it is false, and the letter L if it is true.</p>
-<p>For example, if the screen shows a picture of Maria and a phone, and the sentence says "Maria has a marker," you should respond false by pressing the A key. If the sentence says "Maria has a phone," you should respond true by pressing the L key.</p>
-<p>You will now see some practice examples.</p>
-      `,
-  post_trial_gap: 500,
+  trial_duration: 1000
 };
-timeline.push(instructions);
 
 /* define test procedure */
 let test_procedure = {
@@ -101,6 +88,20 @@ let test_procedure = {
   randomize_order: true,
 };
 timeline.push(test_procedure);
+
+/* define instructionsrecognition trial */
+let instructionsrecognition = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Next, you will see a series of images with an object and a related sentence.</p>
+    <p>You will need to decide whether the sentence is true or false.</p>
+    <p>Press the letter A if it is false, and the letter L if it is true.</p>
+    <p>For example, if the screen shows a picture of Maria and a phone, and the sentence says "Maria has a marker," you should respond false by pressing the A key. If the sentence says "Maria has a phone," you should respond true by pressing the L key.</p>
+    <p>You will now see some practice examples.</p>
+  `,
+  post_trial_gap: 500,
+};
+timeline.push(instructionsrecognition);
 
 /* start the experiment */
 jsPsych.run(timeline);
