@@ -60,7 +60,7 @@ timeline.push(instructions);
 var test_stimuli = peopleImages.map((imgUrl) => {
   return {
     stimulus: imgUrl,
-  };
+  response: "NO_KEYS"};
 });
 
 /* define fixation and test trials */
