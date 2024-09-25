@@ -80,6 +80,20 @@ let test = {
   choices: "NO KEYS",
    },
 
+/* define instructionsrecognition trial */
+let instructionsrecognition = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+        <p>Next, you will see a series of images with an object and a related sentence.</p>
+<p>You will need to decide whether the sentence is true or false.</p>
+<p>Press the letter A if it is false, and the letter L if it is true.</p>
+<p>For example, if the screen shows a picture of Maria and a phone, and the sentence says "Maria has a marker," you should respond false by pressing the A key. If the sentence says "Maria has a phone," you should respond true by pressing the L key.</p>
+<p>You will now see some practice examples.</p>
+      `,
+  post_trial_gap: 500,
+};
+timeline.push(instructions);
+
 /* define test procedure */
 let test_procedure = {
   timeline: [fixation, test],
