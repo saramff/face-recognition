@@ -60,7 +60,6 @@ timeline.push(instructions);
 var test_stimuli = peopleImages.map((imgUrl) => {
   return {
     stimulus: imgUrl,
-    correct_response: "f",
   };
 });
 
@@ -78,18 +77,8 @@ var fixation = {
 var test = {
   type: jsPsychImageKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
-  choices: ["f", "j"],
-  data: {
-    task: "response",
-    correct_response: jsPsych.timelineVariable("correct_response"),
-  },
-  on_finish: function (data) {
-    data.correct = jsPsych.pluginAPI.compareKeys(
-      data.response,
-      data.correct_response
-    );
-  },
-};
+  choices: "NO KEYS",
+   },
 
 /* define test procedure */
 var test_procedure = {
