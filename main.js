@@ -5,7 +5,7 @@
  */
 
 const PEOPLE_URL =
-  "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/men/man";
+  "https://raw.githubusercontent.com/Amaza-ing/images/refs/heads/master/people/";
 const IMAGES_PER_GENDER = 10;
 
 // Create arrays from picture 1 to IMAGES_PER_GENDER
@@ -47,18 +47,10 @@ timeline.push(welcome);
 var instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-        <p>In this experiment, a circle will appear in the center 
-        of the screen.</p><p>If the circle is <strong>blue</strong>, 
-        press the letter F on the keyboard as fast as you can.</p>
-        <p>If the circle is <strong>orange</strong>, press the letter J 
-        as fast as you can.</p>
-        <div style='width: 700px;'>
-        <div style='float: left;'><img src='https://www.jspsych.org/latest/img/blue.png'></img>
-        <p class='small'><strong>Press the F key</strong></p></div>
-        <div style='float: right;'><img src='https://www.jspsych.org/latest/img/orange.png'></img>
-        <p class='small'><strong>Press the J key</strong></p></div>
-        </div>
-        <p>Press any key to begin.</p>
+        <p>In this experiment, you will see faces appear one by one in the center of the screen.</p>
+<p>We ask you to pay special attention to each of these faces.</p>
+<p>They will all pass automatically, one after the other.</p>
+<p>Press any key to begin.</p>
       `,
   post_trial_gap: 500,
 };
