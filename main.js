@@ -20,31 +20,31 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 /* initialize jsPsych */
-var jsPsych = initJsPsych({
+let jsPsych = initJsPsych({
   on_finish: function () {
     jsPsych.data.displayData();
   },
 });
 
 /* create timeline */
-var timeline = [];
+let timeline = [];
 
 /* preload images */
-var preload = {
+let preload = {
   type: jsPsychPreload,
   images: peopleImages,
 };
 timeline.push(preload);
 
 /* define welcome message trial */
-var welcome = {
+let welcome = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "Welcome to the experiment. Press any key to begin.",
 };
 timeline.push(welcome);
 
 /* define instructions trial */
-var instructions = {
+let instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
         <p>In this experiment, you will see faces appear one by one in the center of the screen.</p>
@@ -57,14 +57,14 @@ var instructions = {
 timeline.push(instructions);
 
 /* define trial stimuli array for timeline variables */
-var test_stimuli = peopleImages.map((imgUrl) => {
+let test_stimuli = peopleImages.map((imgUrl) => {
   return {
     stimulus: imgUrl,
   response: "NO_KEYS"};
 });
 
 /* define fixation and test trials */
-var fixation = {
+let fixation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: '<div style="font-size:60px;">+</div>',
   choices: "NO_KEYS",
@@ -74,14 +74,14 @@ var fixation = {
   },
 };
 
-var test = {
+let test = {
   type: jsPsychImageKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: "NO KEYS",
    },
 
 /* define test procedure */
-var test_procedure = {
+let test_procedure = {
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
   randomize_order: true,
