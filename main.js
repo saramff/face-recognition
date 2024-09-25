@@ -5,7 +5,7 @@
  */
 
 const PEOPLE_URL =
-  "https://raw.githubusercontent.com/Amaza-ing/images/refs/heads/master/people";
+  "https://raw.githubusercontent.com/saramff/face-recognition-images/";
 const IMAGES_PER_GENDER = 10;
 
 // Create arrays from picture 1 to IMAGES_PER_GENDER
