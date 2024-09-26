@@ -3,13 +3,53 @@
  * Facial recognition experiment with automatic image presentation
  */
 
-const PEOPLE_URL = "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
+const PEOPLE_URL =
+  "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
 const IMAGES_PER_GENDER = 5;
 
-// Create arrays for men and women images
-const menImages = Array.from({ length: IMAGES_PER_GENDER }, (_, i) => `${PEOPLE_URL}/men/man_${i + 1}.jpg`);
-const womenImages = Array.from({ length: IMAGES_PER_GENDER }, (_, i) => `${PEOPLE_URL}/women/woman_${i + 1}.jpg`);
+// Create pictures arrays for men and women images
+const menImages = Array.from(
+  { length: IMAGES_PER_GENDER },
+  (_, i) => `${PEOPLE_URL}/men/man_${i + 1}.jpg`
+);
+const womenImages = Array.from(
+  { length: IMAGES_PER_GENDER },
+  (_, i) => `${PEOPLE_URL}/women/woman_${i + 1}.jpg`
+);
 const peopleImages = [...menImages, ...womenImages];
+
+const menNames = ["Paco", "Alberto", "Juan", "Manolo", "Pablo"];
+const womenNames = ["Ana", "María", "Juana", "Sandra", "Sofía"];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffle(menImages);
+shuffle(womenImages);
+shuffle(menNames);
+shuffle(womenNames);
+
+const menImgsNames = menImages.map((img, index) => {
+  return {
+    img: img,
+    name: menNames[index],
+  };
+});
+
+const womenImgsNames = womenImages.map((img, index) => {
+  return {
+    img: img,
+    name: womenNames[index],
+  };
+});
+
+const peopleImgsNames = [...menImgsNames, ...womenImgsNames];
+
+shuffle(peopleImgsNames);
 
 /* Initialize jsPsych */
 let jsPsych = initJsPsych({
@@ -48,9 +88,12 @@ let instructions = {
 timeline.push(instructions);
 
 /* Create stimuli array for image presentation */
-let test_stimuli = peopleImages.map((imgUrl) => {
+let test_stimuli = peopleImgsNames.map((person) => {
   return {
-    stimulus: imgUrl,
+    stimulus: `
+      <img class="person-img" src="${person.img}">
+      <p class="person-name">${person.name}</p>
+    `,
   };
 });
 
@@ -58,8 +101,8 @@ let test_stimuli = peopleImages.map((imgUrl) => {
 let fixation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: '<div style="font-size:60px;">+</div>',
-  choices: "NO_KEYS",  // Prevent key press
-  trial_duration: 500,  // Fixation duration
+  choices: "NO_KEYS", // Prevent key press
+  trial_duration: 500, // Fixation duration
   data: {
     task: "fixation",
   },
@@ -67,7 +110,7 @@ let fixation = {
 
 /* Image presentation trial */
 let test = {
-  type: jsPsychImageKeyboardResponse,
+  type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: "NO_KEYS",  // Prevent key press
   trial_duration: 1000,  // Display each image for 1 second
@@ -77,7 +120,7 @@ let test = {
 let test_procedure = {
   timeline: [fixation, test],
   timeline_variables: test_stimuli,
-  randomize_order: true,  // Randomize image order
+  randomize_order: true, // Randomize image order
 };
 timeline.push(test_procedure);
 
