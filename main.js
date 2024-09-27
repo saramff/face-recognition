@@ -3,6 +3,8 @@
  * Facial recognition experiment with automatic image presentation
  */
 
+import { correctObjects, incorrectObjects } from "./objects.js";
+
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
 const IMAGES_PER_GENDER = 5;
@@ -61,6 +63,9 @@ shuffle(peopleImgsNames);
 
 /**********************************************************/
 
+// create objects images array to preload them
+const objectsImgs = correctObjects.map((object) => object.img);
+
 // Create function to get a new array with a random slice from other array
 function getRandomSlice(array, sliceSize) {
   const arraySlice = [];
@@ -75,7 +80,7 @@ function getRandomSlice(array, sliceSize) {
 }
 
 // Define slice size & create men & women array copy not to alter the original ones
-const SLICE_SIZE = 3;
+const SLICE_SIZE = 4;
 const menCopy = [...menImgsNames];
 const womenCopy = [...womenImgsNames];
 
@@ -83,9 +88,43 @@ const womenCopy = [...womenImgsNames];
 const menSlice = getRandomSlice(menCopy, SLICE_SIZE);
 const womenSlice = getRandomSlice(womenCopy, SLICE_SIZE);
 
+// Create correct objects slice array
+const correctObjectsSlice = getRandomSlice(correctObjects, SLICE_SIZE)
+
+// Add correct objects to men & women
+const menCorrectObjects = correctObjectsSlice.slice(0, SLICE_SIZE / 2);
+const womenCorrectObjects = correctObjectsSlice.slice(SLICE_SIZE / 2, correctObjectsSlice.length);
+
+menCorrectObjects.forEach((object, index) => menSlice[index].object = object);
+womenCorrectObjects.forEach((object, index) => womenSlice[index].object = object);
+
+// Create incorrect objects slice (first is just sentences, and then random images are added)
+const incorrectObjectsSlice = getRandomSlice(incorrectObjects, SLICE_SIZE);
+
+const incorrectObjectsWithImg = incorrectObjectsSlice.map((objectSentence) => {
+  const img = getRandomSlice(correctObjects, 1)[0].img;
+
+  return {
+    sentence: objectSentence,
+    img: img,
+    correct: false
+  }
+})
+
+// Add incorrect objects to men & women
+const menIncorrectObjects = incorrectObjectsWithImg.slice(0, SLICE_SIZE / 2);
+const womenIncorrectObjects = incorrectObjectsWithImg.slice(SLICE_SIZE / 2, incorrectObjectsSlice.length);
+
+menIncorrectObjects.forEach((object, index) => menSlice[menSlice.length - 1 - index].object = object);
+womenIncorrectObjects.forEach((object, index) => womenSlice[womenSlice.length - 1 - index].object = object);
+
+// Create people slice array concatenating men & women slice arrays
 const peopleSlice = [...menSlice, ...womenSlice];
 
+// Shuffle people slice array
 shuffle(peopleSlice);
+console.log(peopleSlice);
+
 
 /* Initialize jsPsych */
 let jsPsych = initJsPsych({
@@ -103,6 +142,13 @@ let preload = {
   images: peopleImages,
 };
 timeline.push(preload);
+
+/* Preload objects */
+let preloadObjects = {
+  type: jsPsychPreload,
+  images: objectsImgs,
+};
+timeline.push(preloadObjects);
 
 /* Welcome message trial */
 let welcome = {
@@ -173,6 +219,27 @@ let instructionsrecognition = {
   post_trial_gap: 500,
 };
 timeline.push(instructionsrecognition);
+
+/* Create stimuli array for image presentation */
+let test_objects_stimuli = peopleSlice.map((person) => {
+  return {
+    stimulus: `
+      <div class="imgs-container">
+        <img class="person-img" src="${person.img}">
+        <img class="object-img" src="${person.object.img}">
+      </div>
+      <p class="person-name">${person.name} ${person.object.sentence}</p>
+    `,
+  };
+});
+
+/* Test procedure: fixation + image presentation */
+let test_objects_procedure = {
+  timeline: [fixation, test],
+  timeline_variables: test_objects_stimuli,
+  randomize_order: true, // Randomize image order
+};
+timeline.push(test_objects_procedure);
 
 /* Run the experiment */
 jsPsych.run(timeline);
