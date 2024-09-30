@@ -23,8 +23,8 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 // Create name arrays for men and women
-const menNames = ["Paco", "Alberto", "Juan", "Manolo", "Pablo"];
-const womenNames = ["Ana", "María", "Juana", "Sandra", "Sofía"];
+const menNames = ["Antonio", "Manuel", "José", "Francisco", "David"];
+const womenNames = ["María", "Carmen", "Laura", "Marta", "Elena"];
 
 // Create suffle function - suffles array index randomly
 function shuffle(array) {
@@ -210,11 +210,11 @@ timeline.push(test_procedure);
 let instructionsrecognition = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Next, you will see a series of images with an object and a related sentence.</p>
-    <p>Press 'A' if the sentence is false, and 'L' if it is true.</p>
-    <p>For example, if the screen shows a picture of Maria and a phone, and the sentence says "Maria has a marker," press 'A'(NO). 
-    <p>If the screen shows a picture of Maria and a phone and it says "Maria has a phone," press 'L'(YES).</p>
-    <p>Press any key to begin the practice examples.</p>
+    <p>Next, you will see a series of faces with an object and a related sentence.</p>
+    <p>Press 'A' if the sentence is false, and 'L' if the sentence is true.</p>
+    <p>For example, if the screen shows Ana's face and a teddy, and the sentence says "Ana has a marker," press 'A'(NO). 
+    <p>On the other side, if the screen shows Ana's face and a teddy and it says "Ana has a teddy," press 'L'(YES).</p>
+    <p>Press any key to begin.</p>
   `,
   post_trial_gap: 500,
 };
