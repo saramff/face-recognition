@@ -252,5 +252,17 @@ let test_objects_procedure = {
 };
 timeline.push(test_objects_procedure);
 
+/* Tetris */
+let tetris = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <div class="tetris-visible"></div>
+  `,
+  post_trial_gap: 500,
+  choices: "NO_KEYS", // Prevent key press
+  trial_duration: 1200000, // Fixation duration
+};
+timeline.push(tetris);
+
 /* Run the experiment */
 jsPsych.run(timeline);
