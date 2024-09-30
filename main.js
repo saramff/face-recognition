@@ -235,6 +235,8 @@ let test_objects_stimuli = peopleSlice.map((person) => {
 
 /* Test procedure: fixation + image presentation */
 let test_objects_procedure = {
+  type: jsPsychImageKeyboardResponse,
+  choices: ['a', 'l']
   timeline: [fixation, test],
   timeline_variables: test_objects_stimuli,
   randomize_order: true, // Randomize image order
