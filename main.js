@@ -195,7 +195,7 @@ let test = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 1000, // Display each image for 1 second
+  trial_duration: 2000, // Display each image for 2 second
 };
 
 /* Test procedure: fixation + image presentation */
@@ -212,7 +212,11 @@ let instructionsrecognition = {
   stimulus: `
     <p>Next, you will see a series of faces with an object and a related sentence.</p>
     <p>Press 'A' if the sentence is false, and 'L' if the sentence is true.</p>
-    <p>For example, if the screen shows Ana's face and a teddy, and the sentence says "Ana has a marker," press 'A'(NO). 
+    <p>For example, if the screen shows Ana's face and a teddy, and the sentence says "Ana has a marker," press 'A'(NO).</p>
+    <div>
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/men/man_1.jpg' class="img-instructions" />
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/gafas.jpg' class="img-instructions" />
+    </div>
     <p>On the other side, if the screen shows Ana's face and a teddy and it says "Ana has a teddy," press 'L'(YES).</p>
     <p>Press any key to begin.</p>
   `,
@@ -233,11 +237,16 @@ let test_objects_stimuli = peopleSlice.map((person) => {
   };
 });
 
+/* Image presentation trial */
+let testObjects = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable("stimulus"),
+  choices: ['a', 'l']
+};
+
 /* Test procedure: fixation + image presentation */
 let test_objects_procedure = {
-  type: jsPsychImageKeyboardResponse,
-  choices: ['a', 'l']
-  timeline: [fixation, test],
+  timeline: [fixation, testObjects],
   timeline_variables: test_objects_stimuli,
   randomize_order: true, // Randomize image order
 };
