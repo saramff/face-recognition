@@ -61,7 +61,7 @@ const peopleImgsNames = [...menImgsNames, ...womenImgsNames];
 // suffle people imgs & names array randomly
 shuffle(peopleImgsNames);
 
-/**********************************************************/
+/**************************************************************************************/
 
 // create objects images array to preload them
 const objectsImgs = correctObjects.map((object) => object.img);
@@ -125,6 +125,38 @@ const peopleSlice = [...menSlice, ...womenSlice];
 shuffle(peopleSlice);
 console.log(peopleSlice);
 
+/**************************************************************************************/
+
+const NEW_PEOPLE_URL =
+  "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_";
+const NEW_IMAGES = 10;
+
+// Create pictures array for new images
+const newImages = Array.from(
+  { length: NEW_IMAGES },
+  (_, i) => {
+    return {
+      img: `${NEW_PEOPLE_URL}${i + 1}.jpg`,
+      correct_response: "l"
+    }
+  }
+);
+
+const peopleSliceImgs = peopleSlice.map((person) => {
+  return {
+    img: person.img,
+    correct_response: "a"
+  }
+})
+
+const recognitionFaces = [...newImages, ...peopleSliceImgs];
+
+shuffle(recognitionFaces);
+
+// create faces images array to preload them
+const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
+
+/**************************************************************************************/
 
 /* Initialize jsPsych */
 let jsPsych = initJsPsych({
@@ -135,19 +167,6 @@ let jsPsych = initJsPsych({
 
 /* Create timeline */
 let timeline = [];
-
-/* Tetris */
-let tetris = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div class="tetris-visible"></div>
-  `,
-  post_trial_gap: 500,
-  choices: "NO_KEYS", // Prevent key press
-  // trial_duration: 1500, // Fixation duration
-};
-timeline.push(tetris);
-
 
 /* Preload images */
 let preload = {
@@ -163,12 +182,23 @@ let preloadObjects = {
 };
 timeline.push(preloadObjects);
 
+/* Preload new faces */
+let preloadNewFaces = {
+  type: jsPsychPreload,
+  images: recognitionFacesImgs,
+};
+timeline.push(preloadNewFaces);
+
 /* Welcome message trial */
 let welcome = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "Welcome to the experiment. Press any key to begin.",
 };
 timeline.push(welcome);
+
+
+/**************************************************************************************/
+
 
 /* Instructions trial */
 let instructions = {
@@ -218,6 +248,10 @@ let test_procedure = {
   randomize_order: true, // Randomize image order
 };
 timeline.push(test_procedure);
+
+
+/**************************************************************************************/
+
 
 /* Instructions for recognition phase */
 let instructionsrecognition = {
@@ -277,6 +311,62 @@ let test_objects_procedure = {
   randomize_order: true, // Randomize image order
 };
 timeline.push(test_objects_procedure);
+
+
+/**************************************************************************************/
+
+
+/* Tetris */
+let tetris = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <div class="tetris-visible"></div>
+  `,
+  post_trial_gap: 500,
+  choices: "NO_KEYS", // Prevent key press
+  trial_duration: 1500, // Fixation duration
+};
+timeline.push(tetris);
+
+
+/**************************************************************************************/
+
+/* Create stimuli array for image presentation */
+let face_recognition_stimuli = recognitionFaces.map((face) => {
+  return {
+    stimulus: `
+      <div class="imgs-container">
+        <img class="person-img" src="${face.img}">
+      </div>
+    `,
+    correct_response: face.correct_response
+  };
+});
+
+/* Image presentation trial */
+let testFaces = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable("stimulus"),
+  choices: ['a', 'l'],
+  data: {
+    task: "response",
+    correct_response: jsPsych.timelineVariable("correct_response"),
+  },
+  on_finish: function (data) {
+    data.correct = jsPsych.pluginAPI.compareKeys(
+      data.response,
+      data.correct_response
+    );
+  },
+};
+
+/* Test procedure: fixation + image presentation */
+let test_faces_procedure = {
+  timeline: [fixation, testObjects],
+  timeline_variables: face_recognition_stimuli,
+  randomize_order: true, // Randomize image order
+};
+timeline.push(test_faces_procedure);
 
 
 /* Run the experiment */
