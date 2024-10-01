@@ -1,5 +1,8 @@
 // https://tetris.fandom.com/wiki/Tetris_Guideline
 
+const playButton = document.querySelector("#play");
+const playAgain = document.querySelector("#play-again");
+
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
 function getRandomInt(min, max) {
@@ -108,6 +111,8 @@ function placeTetromino() {
 
 // show the game over screen
 function showGameOver() {
+  playAgain.classList.remove("hidden");
+
   cancelAnimationFrame(rAF);
   gameOver = true;
 
@@ -133,13 +138,17 @@ const tetrominoSequence = [];
 const playfield = [];
 
 // populate the empty state
-for (let row = -2; row < 20; row++) {
-  playfield[row] = [];
-
-  for (let col = 0; col < 10; col++) {
-    playfield[row][col] = 0;
+const setEmptyState = () => {
+  for (let row = -2; row < 20; row++) {
+    playfield[row] = [];
+  
+    for (let col = 0; col < 10; col++) {
+      playfield[row][col] = 0;
+    }
   }
 }
+
+setEmptyState();
 
 // how to draw each tetromino
 // @see https://tetris.fandom.com/wiki/SRS
@@ -283,9 +292,16 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-const playButton = document.querySelector("#play");
-
 playButton.addEventListener("click", () => {
   // start the game
   rAF = requestAnimationFrame(loop);
+  playButton.classList.add("hidden");
+  playAgain.classList.add("hidden");
+});
+
+playAgain.addEventListener("click", () => {
+  setEmptyState();
+  gameOver = false;
+  rAF = requestAnimationFrame(loop);
+  playAgain.classList.add("hidden");
 });

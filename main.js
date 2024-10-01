@@ -136,6 +136,19 @@ let jsPsych = initJsPsych({
 /* Create timeline */
 let timeline = [];
 
+/* Tetris */
+let tetris = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <div class="tetris-visible"></div>
+  `,
+  post_trial_gap: 500,
+  choices: "NO_KEYS", // Prevent key press
+  // trial_duration: 1500, // Fixation duration
+};
+timeline.push(tetris);
+
+
 /* Preload images */
 let preload = {
   type: jsPsychPreload,
@@ -264,18 +277,6 @@ let test_objects_procedure = {
   randomize_order: true, // Randomize image order
 };
 timeline.push(test_objects_procedure);
-
-/* Tetris */
-let tetris = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div class="tetris-visible"></div>
-  `,
-  post_trial_gap: 500,
-  choices: "NO_KEYS", // Prevent key press
-  trial_duration: 1500, // Fixation duration
-};
-timeline.push(tetris);
 
 
 /* Run the experiment */

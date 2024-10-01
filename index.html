@@ -29,12 +29,20 @@
         align-items: center;
         justify-content: center;
 
+        .hidden {
+          display: none;
+        }
+
         #game-container {
           display: block;
         }
 
         #game {
           border: 1px solid black;
+        }
+
+        .play-btn {
+          cursor: pointer;
         }
       }
 
@@ -59,7 +67,8 @@
   </head>
   <body>
     <div id="game-container">
-      <h1 id="play">PLAY</h1>
+      <h1 id="play" class="play-btn">PLAY</h1>
+      <h1 id="play-again" class="play-btn hidden">PLAY AGAIN</h1>
       <canvas width="320" height="640" id="game"></canvas>
     </div>
   </body>
