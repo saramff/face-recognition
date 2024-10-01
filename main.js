@@ -107,7 +107,7 @@ const incorrectObjectsWithImg = incorrectObjectsSlice.map((objectSentence) => {
   return {
     sentence: objectSentence,
     img: img,
-    correct: false
+    correct_response: "l"
   }
 })
 
@@ -214,11 +214,13 @@ let instructionsrecognition = {
     <p>Press 'A' if the sentence is false, and 'L' if the sentence is true.</p>
     </p></p>
     <p>As in this example, if the screen shows Ana's face and a teddy, and the sentence says "Ana has a marker," press 'A'(NO).</p>
+    <br />
     <div>
-      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg' />
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class="img-instructions" />
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Teddy.jpg' class="img-instructions" />
     </div>
-        <p>Press any key to begin.</p>
+    <br />
+    <p>Press any key to begin.</p>
   `,
   post_trial_gap: 500,
 };
@@ -234,6 +236,7 @@ let test_objects_stimuli = peopleSlice.map((person) => {
       </div>
       <p class="person-name">${person.name} ${person.object.sentence}</p>
     `,
+    correct_response: person.object.correct_response
   };
 });
 
@@ -241,7 +244,17 @@ let test_objects_stimuli = peopleSlice.map((person) => {
 let testObjects = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
-  choices: ['a', 'l']
+  choices: ['a', 'l'],
+  data: {
+    task: "response",
+    correct_response: jsPsych.timelineVariable("correct_response"),
+  },
+  on_finish: function (data) {
+    data.correct = jsPsych.pluginAPI.compareKeys(
+      data.response,
+      data.correct_response
+    );
+  },
 };
 
 /* Test procedure: fixation + image presentation */
