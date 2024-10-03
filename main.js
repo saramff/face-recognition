@@ -168,6 +168,113 @@ let jsPsych = initJsPsych({
 /* Create timeline */
 let timeline = [];
 
+////////////////////////////////////////////////////////////////////////
+//                           Consent                                  //
+//                           (!works only on server)                  //  
+////////////////////////////////////////////////////////////////////////
+let check_consent = (elem) => {
+  if (document.getElementById('consent_checkbox').checked) {
+    return true;
+  }
+  else {
+    alert("Vielen Dank f&uumlr ihr Interesse an unserem Experiment. Wenn Sie bereit sind teilzunehmen, geben Sie uns bitte Ihr Einverst&aumlndnis.");
+    return false;
+  }
+  return false;
+};
+
+let html_block_consent = {
+  type: jsPsychExternalHtml,
+  url: "consentA2.html",
+  cont_btn: "start_experiment",
+  check_fn: check_consent
+};
+timeline.push(html_block_consent);
+
+// ////////////////////////////////////////////////////////////////////////
+// //                           Demographic  variables                   //
+// ////////////////////////////////////////////////////////////////////////
+
+/* fullscreen */
+timeline.push({
+  type: jsPsychFullscreen,
+  fullscreen_mode: true,
+  message: '<p>Bitte Klicken, um zum Vollbildmodus zu wechseln.</p>',
+  button_label:'Weiter',
+  on_finish: function(data){
+    var help_fullscreen = data.success;
+    jsPsych.data.addProperties({fullscreen: help_fullscreen});
+  }
+});
+
+var age = {
+  type: jsPsychSurveyText,
+  preamble: 'Im folgenden fragen wir Sie nach einigen demographischen Daten.',
+  name: 'age',
+    button_label:'Weiter',
+    questions: [{prompt:'<div>Wie alt sind Sie derzeit?<\div>', rows: 1, columns: 2, required: 'true'}],
+  data: {
+    type:"demo",
+    age: age,
+  },
+  on_finish: function(data){
+    var help_age = data.response.Q0;
+    jsPsych.data.addProperties({age: help_age});
+  },
+  on_load: function() {
+    document.querySelector('.jspsych-btn').style.marginTop = '20px'; // Adjust margin as needed
+  }
+};
+
+//jsPsych.data.get().last(1).values()[0].response.Q0
+
+timeline.push(age);
+
+var demo2 = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [
+    {
+      prompt:'Bitte w&aumlhlen Sie das Geschlecht aus, mit dem Sie sich identifizieren.',
+      name: 'gender',
+      options: ["m&aumlnnlich", "weiblich", "divers", "keine Angabe"],
+      required: true,
+      horizontal: true
+    },
+    {
+      prompt:'Bitte geben Sie Ihre H&aumlndigkeit an.',
+      name: 'handedness',
+      options: ["links", "rechts", "beidh&aumlndig"],
+      required: true,
+      horizontal: true
+    },
+    {
+      prompt:'Bitte w&aumlhlen Sie Ihre Muttersprache aus.',
+      name: 'language',
+      options: ["Deutsch", "andere"],
+      required: true,
+      horizontal: true
+    },
+  ],
+  button_label:'Weiter',
+  on_finish: function(data) {
+    var help_gender = data.response.gender;
+    var help_hand = data.response.handedness;
+    var help_language = data.response.language;
+    jsPsych.data.addProperties({gender: help_gender, handedness: help_hand, language: help_language});
+  }
+};
+timeline.push(demo2);
+
+// based on random Number:
+const vpNum = Math.floor(Math.random()*1000000);
+
+jsPsych.data.addProperties({
+ subject: vpNum,
+ expName: "Cognition Sara",
+});
+
+/************************************************************************************************ */
+
 /* Preload images */
 let preload = {
   type: jsPsychPreload,

@@ -4,12 +4,12 @@ const IMG_URL =
 export const correctObjects = [
   {
     sentence: "has a piggy bank.",
-    img: `${IMG_URL}piggy bank.jpg`,
+    img: `${IMG_URL}piggy-bank.jpg`,
     correct_response: "a",
   },
   {
     sentence: "has a trash can.",
-    img: `${IMG_URL}trash can.jpg`,
+    img: `${IMG_URL}trash-can.jpg`,
     correct_response: "a",
   },
   {
