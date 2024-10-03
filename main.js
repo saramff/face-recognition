@@ -267,10 +267,11 @@ timeline.push(demo2);
 
 // based on random Number:
 const vpNum = Math.floor(Math.random()*1000000);
+const expName = "Cognition-Sara"
 
 jsPsych.data.addProperties({
  subject: vpNum,
- expName: "Cognition Sara",
+ expName: expName,
 });
 
 /************************************************************************************************ */
@@ -476,5 +477,26 @@ let test_faces_procedure = {
 timeline.push(test_faces_procedure);
 
 
+/************************************************************************** */
+
+/* START: save data */
+function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php');  
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filename: name, filedata: data}));
+}
+ 
+var save_data = {
+  type: jsPsychCallFunction,
+  func: function(){saveData(expName + "_" + vpNum, jsPsych.data.get().csv());},
+  timing_post_trial: 200
+};
+
+timeline.push(save_data);
+
 /* Run the experiment */
 jsPsych.run(timeline);
+
+console.log("get", jsPsych.data.get());
+console.log("csv", jsPsych.data.get().csv());
