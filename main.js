@@ -1,13 +1,13 @@
-/**
- * Sara's Experiment
- * Facial recognition experiment with automatic image presentation
- */
+////////////////////////////////////////////////////////////////////////
+//                           Creations                                //
+//                                                                    //  
+////////////////////////////////////////////////////////////////////////
 
 import { correctObjects, incorrectObjects } from "./objects.js";
 
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
-const IMAGES_PER_GENDER = 5;
+const IMAGES_PER_GENDER = 96;
 
 // Create pictures arrays for men and women images
 const menImages = Array.from(
@@ -23,8 +23,8 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 // Create name arrays for men and women
-const menNames = ["Antonio", "Manuel", "José", "Francisco", "David"];
-const womenNames = ["María", "Carmen", "Laura", "Marta", "Elena"];
+const menNames = ["Peter", "Wolfgang", "Michael", "Werner", "Klaus", "Thomas", "Manfred", "Helmut", "Jürgen", "Heinz", "Gerhard", "Andreas", "Hans", "Josef", "Günter", "Dieter", "Horst", "Walter", "Frank", "Bernd", "Karl", "Herbert", "Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Jörg", "Ralf", "Erich", "Norbert", "Bernhard", "Willi", "Alexander", "Ulrich", "Markus", "Matthias", "Harald", "Paul", "Roland", "Ernst", "Reinhard", "Günther", "Gerd", "Fritz", "Otto", "Friedrich", "Erwin", "Lothar", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Hubert", "Udo", "Holger", "Albert", "Ludwig", "Dietmar", "Hartmut", "Reinhold", "Adolf", "Detlef", "Oliver", "Christoph", "Stephan", "Axel", "Reiner", "Alois", "Eberhard", "Heiko", "Daniel", "Sven", "Bruno", "Olaf", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten"];
+const womenNames = ["Emilia", "Mia", "Sophia", "Mila", "Emma", "Hannah", "Lea", "Ella", "Lina", "Clar", "Marie", "Leni", "Lia", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Amelie", "Ida", "Frieda", "Mira", "Charlotte", "Malia", "Neele", "Sophie", "Juna", "Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Amelia", "Malea", "Marlene", "Mina", "Malina", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Maila", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Emelie", "Marla", "Melissa", "Malou", "Livia", "Ronja", "Ayla", "Emm", "Leila"];
 
 // Create suffle function - suffles array index randomly
 function shuffle(array) {
@@ -80,7 +80,7 @@ function getRandomSlice(array, sliceSize) {
 }
 
 // Define slice size & create men & women array copy not to alter the original ones
-const SLICE_SIZE = 4;
+const SLICE_SIZE = 24;
 const menCopy = [...menImgsNames];
 const womenCopy = [...womenImgsNames];
 
@@ -312,9 +312,9 @@ timeline.push(welcome);
 let instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>In this experiment, faces will appear one by one automatically.</p>
-    <p>Please pay close attention to each face.</p>
-    <p>Press any key to begin when you're ready.</p>
+    <p>In diesem Experiment werden nacheinander automatisch Gesichter angezeigt.</p>
+    <p>Bitte achte genau auf jedes Gesicht und seinen Namen.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
   `,
   post_trial_gap: 500,
 };
@@ -346,7 +346,8 @@ let test = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 500, // Display each image for 2 second
+  trial_duration: 1000, // Display each image for 1 second
+  post_trial_gap: 500
 };
 
 /* Test procedure: fixation + image presentation */
@@ -365,17 +366,17 @@ timeline.push(test_procedure);
 let instructionsrecognition = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Next, you will see a series of faces with an object and a related sentence.</p>
-    <p>Press 'A' if the sentence is false, and 'L' if the sentence is true.</p>
+    <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
+    <p>Drücke 'A', wenn der Satz falsch ist, und 'L', wenn der Satz richtig ist.</p>
     </p></p>
-    <p>As in this example, if the screen shows Ana's face and a teddy, and the sentence says "Ana has a marker," press 'A'(NO).</p>
+    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke 'A' (NEIN).</p>
     <br />
     <div>
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class="img-instructions" />
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Teddy.jpg' class="img-instructions" />
     </div>
     <br />
-    <p>Press any key to begin.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.</p>
   `,
   post_trial_gap: 500,
 };
