@@ -55,7 +55,7 @@ export const correctObjects = [
   {
     sentence: "has a magnifying glass.", 
     img: `${IMG_URL}magnifying-glass.jpg`, 
-    correct_response: "a" 
+    correct_response: "a",
   },
   {
     sentence: "hat eine Haarbürste.", //"has a hairbrush.",
@@ -73,7 +73,7 @@ export const correctObjects = [
   },
   { 
     sentence: "hat ein Mikrofon.", //has a microphone.", 
-    mg: `${IMG_URL}microphone.jpg`, 
+    img: `${IMG_URL}microphone.jpg`, 
     correct_response: "a" 
   },
   { 
@@ -132,7 +132,7 @@ export const correctObjects = [
   },
   { 
     sentence: "hat einen Computer.", //has a computer.", 
-    img: `${IMG_URL}computer.jpg`, 
+    img: `${IMG_URL}screen.jpg`, 
     correct_response: "a" 
   },
   { 
@@ -241,8 +241,6 @@ export const correctObjects = [
     correct_response: "a" 
   },
 ];
-
-*/
 
 export const incorrectObjects = [
   "hat eine Lampe.", //has a lamp.",

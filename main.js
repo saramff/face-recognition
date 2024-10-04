@@ -123,7 +123,6 @@ const peopleSlice = [...menSlice, ...womenSlice];
 
 // Shuffle people slice array
 shuffle(peopleSlice);
-console.log(peopleSlice);
 
 /**************************************************************************************/
 
