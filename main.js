@@ -7,7 +7,7 @@ import { correctObjects, incorrectObjects } from "./objects.js";
 
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
-const IMAGES_PER_GENDER = 96;
+const IMAGES_PER_GENDER = 10; //96
 
 // Create pictures arrays for men and women images
 const menImages = Array.from(
@@ -80,7 +80,7 @@ function getRandomSlice(array, sliceSize) {
 }
 
 // Define slice size & create men & women array copy not to alter the original ones
-const SLICE_SIZE = 24;
+const SLICE_SIZE = 4; //24
 const menCopy = [...menImgsNames];
 const womenCopy = [...womenImgsNames];
 
@@ -299,7 +299,7 @@ timeline.push(preloadNewFaces);
 /* Welcome message trial */
 let welcome = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "Welcome to the experiment. Press any key to begin.",
+  stimulus: "Willkommen zum Experiment. Drücken Sie eine beliebige Taste, um zu beginnen.",
 };
 timeline.push(welcome);
 
@@ -423,6 +423,20 @@ timeline.push(test_objects_procedure);
 
 /**************************************************************************************/
 
+/* Instructions for Tetris */
+let instructionstetris = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Jetzt wirst du für eine Weile Tetris spielen.</p>
+    <p>Benutze die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
+    </p></p>
+    <p>Drücke die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicke auf 'Play', um das Spiel zu starten.</p>
+    <p>Wenn du verlierst, wähle 'Try again', um das Spiel neu zu starten. Du wirst auf diese Weise spielen, bis die Zeit abläuft.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  `,
+  post_trial_gap: 500,
+};
+timeline.push(instructionstetris);
 
 /* Tetris */
 let tetris = {
@@ -432,12 +446,26 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 1500, // Fixation duration
+  trial_duration: 60000, // Fixation duration
 };
 timeline.push(tetris);
 
 
 /**************************************************************************************/
+
+/* Instructions for Tetris */
+let instructionsimagepresentation = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  `,
+  post_trial_gap: 500,
+};
+timeline.push(instructionsimagepresentation);
 
 /* Create stimuli array for image presentation */
 let face_recognition_stimuli = recognitionFaces.map((face) => {
