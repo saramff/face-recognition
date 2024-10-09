@@ -348,58 +348,6 @@ timeline.push(welcome);
 
 /**************************************************************************************/
 
-/* Instructions for name presentation */
-let instructionsNamePresentation = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
-    </p></p>
-    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
-    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
-    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
-  `,
-  post_trial_gap: 500,
-};
-timeline.push(instructionsNamePresentation);
-
-/* Create stimuli array for name presentation */
-let name_recognition_stimuli = allNames.map((name) => {
-  return {
-    stimulus: `
-      <h2 class="names-experiment">${name.name}</h2>
-    `,
-    correct_response: name.correct_response
-  };
-});
-
-/* Name presentation trial */
-let testNames = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: jsPsych.timelineVariable("stimulus"),
-  choices: ['a', 'l'],
-  data: {
-    task: "response",
-    correct_response: jsPsych.timelineVariable("correct_response"),
-  },
-  on_finish: function (data) {
-    data.correct = jsPsych.pluginAPI.compareKeys(
-      data.response,
-      data.correct_response
-    );
-  },
-};
-
-/* Test procedure: fixation + name presentation */
-let test_names_procedure = {
-  timeline: [fixation, testNames],
-  timeline_variables: name_recognition_stimuli,
-  randomize_order: true, // Randomize name order
-};
-timeline.push(test_names_procedure);
-
-
-/**************************************************************************************/
-
 /* Instructions trial */
 let instructions = {
   type: jsPsychHtmlKeyboardResponse,
@@ -585,6 +533,58 @@ let test_faces_procedure = {
   randomize_order: true, // Randomize image order
 };
 timeline.push(test_faces_procedure);
+
+
+/**************************************************************************************/
+
+/* Instructions for name presentation */
+let instructionsNamePresentation = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  `,
+  post_trial_gap: 500,
+};
+timeline.push(instructionsNamePresentation);
+
+/* Create stimuli array for name presentation */
+let name_recognition_stimuli = allNames.map((name) => {
+  return {
+    stimulus: `
+      <h2 class="names-experiment">${name.name}</h2>
+    `,
+    correct_response: name.correct_response
+  };
+});
+
+/* Name presentation trial */
+let testNames = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable("stimulus"),
+  choices: ['a', 'l'],
+  data: {
+    task: "response",
+    correct_response: jsPsych.timelineVariable("correct_response"),
+  },
+  on_finish: function (data) {
+    data.correct = jsPsych.pluginAPI.compareKeys(
+      data.response,
+      data.correct_response
+    );
+  },
+};
+
+/* Test procedure: fixation + name presentation */
+let test_names_procedure = {
+  timeline: [fixation, testNames],
+  timeline_variables: name_recognition_stimuli,
+  randomize_order: true, // Randomize name order
+};
+timeline.push(test_names_procedure);
 
 
 /************************************************************************** */
