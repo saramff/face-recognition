@@ -5,6 +5,24 @@
 
 import { correctObjects, incorrectObjects } from "./objects.js";
 
+
+/**************************************************************************************/
+
+const randomNumber = Math.random();
+
+let correctKey;
+let incorrectKey;
+
+if (randomNumber < 0.5) {
+  correctKey = "a";
+  incorrectKey = "l";
+} else {
+  correctKey = "l";
+  incorrectKey = "a";
+}
+
+/**************************************************************************************/
+
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
 const IMAGES_PER_GENDER = 10; //96
@@ -63,6 +81,11 @@ shuffle(peopleImgsNames);
 
 /**************************************************************************************/
 
+// add correct_response to objects array
+correctObjects.forEach((object) => object.correct_response = correctKey);
+console.log(correctObjects);
+
+
 // create objects images array to preload them
 const objectsImgs = correctObjects.map((object) => object.img);
 
@@ -107,7 +130,7 @@ const incorrectObjectsWithImg = incorrectObjectsSlice.map((objectSentence) => {
   return {
     sentence: objectSentence,
     img: img,
-    correct_response: "l"
+    correct_response: incorrectKey
   }
 })
 
@@ -136,7 +159,7 @@ const newImages = Array.from(
   (_, i) => {
     return {
       img: `${NEW_PEOPLE_URL}${i + 1}.jpg`,
-      correct_response: "l"
+      correct_response: incorrectKey
     }
   }
 );
@@ -144,7 +167,7 @@ const newImages = Array.from(
 const peopleSliceImgs = peopleSlice.map((person) => {
   return {
     img: person.img,
-    correct_response: "a"
+    correct_response: correctKey
   }
 })
 
@@ -166,7 +189,7 @@ const newNames = [...newMenNames, ...newWomenNames];
 const newNamesWithResponse = newNames.map((name) => {
   return {
     name: name,
-    correct_response: "a"
+    correct_response: correctKey
   }
 })
 
@@ -177,7 +200,7 @@ const menAndWomenSliceNames = [...menNamesSlice, ...womenNamesSlice];
 const menAndWomenNamesWithResponse = menAndWomenSliceNames.map((name) => {
   return {
     name: name,
-    correct_response: "l"
+    correct_response: incorrectKey
   }
 })
 
@@ -396,7 +419,7 @@ let instructionsrecognition = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
-    <p>Drücke 'A', wenn der Satz falsch ist, und 'L', wenn der Satz richtig ist.</p>
+    <p>Drücke '${correctKey.toUpperCase()}', wenn der Satz falsch ist, und '${incorrectKey.toUpperCase()}', wenn der Satz richtig ist.</p>
     </p></p>
     <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke 'A' (NEIN).</p>
     <br />
@@ -489,8 +512,8 @@ let instructionsimagepresentation = {
   stimulus: `
     <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
     </p></p>
-    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
-    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
     <p>Drücke eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,
@@ -543,8 +566,8 @@ let instructionsNamePresentation = {
   stimulus: `
     <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
     </p></p>
-    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
-    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
     <p>Drücke eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,

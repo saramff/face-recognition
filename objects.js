@@ -4,53 +4,43 @@ const IMG_URL =
 export const correctObjects = [
   {
     sentence: "hat eine Sparbüchse.", //"has a piggy bank.",
-    img: `${IMG_URL}piggy-bank.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}piggy-bank.jpg`
   },
   {
     sentence: "hat einen Mülleimer.", //"has a trash can.",
-    img: `${IMG_URL}trash-can.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}trash-can.jpg`
   },
   {
     sentence: "hat ein Seil.", //"has a rope.",
-    img: `${IMG_URL}rope.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}rope.jpg`
   },
   {
     sentence: "hat einen Schlüssel.", //"has a key.",
-    img: `${IMG_URL}key.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}key.jpg`
   },
   {
     sentence: "hat einen Regenschirm.", //"has an umbrella.",
-    img: `${IMG_URL}umbrella.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}umbrella.jpg`
   },
   {
     sentence: "hat eine Brille.", //"has glasses.",
-    img: `${IMG_URL}glasses.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}glasses.jpg`
   },
   {
     sentence: "hat eine Banane.", //has a banana.",
-    img: `${IMG_URL}banana.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}banana.jpg`
   },
   {
     sentence: "hat einen Taschenrechner.", //"has a calculator.",
-    img: `${IMG_URL}calculator.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}calculator.jpg`
   },
   {
     sentence: "hat eine Schere.", //"has scissors.",
-    img: `${IMG_URL}scissors.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}scissors.jpg`
   },
   {
     sentence: "hat eine Haarbürste.", //"has a hairbrush.",
-    img: `${IMG_URL}hairbrush.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}hairbrush.jpg`
   },
   {
     sentence: "has a magnifying glass.", 
@@ -59,8 +49,7 @@ export const correctObjects = [
   },
   {
     sentence: "hat eine Haarbürste.", //"has a hairbrush.",
-    img: `${IMG_URL}hairbrush.jpg`,
-    correct_response: "a",
+    img: `${IMG_URL}hairbrush.jpg`
   },
   { sentence: "hat eine Gitarre.", //"has a guitar.",
     img: `${IMG_URL}guitar.jpg`, 
