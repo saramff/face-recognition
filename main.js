@@ -157,6 +157,36 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 /**************************************************************************************/
 
+const NAMES_PER_GENDER = 5
+
+const newMenNames = ["aaa", "bbb", "ccc", "ddd", "eee"];
+const newWomenNames = ["111", "222", "333", "444", "555"];
+const newNames = [...newMenNames, ...newWomenNames];
+
+const newNamesWithResponse = newNames.map((name) => {
+  return {
+    name: name,
+    correct_response: "a"
+  }
+})
+
+const menNamesSlice = getRandomSlice([...menNames], NAMES_PER_GENDER);
+const womenNamesSlice = getRandomSlice([...womenNames], NAMES_PER_GENDER);
+const menAndWomenSliceNames = [...menNamesSlice, ...womenNamesSlice];
+
+const menAndWomenNamesWithResponse = menAndWomenSliceNames.map((name) => {
+  return {
+    name: name,
+    correct_response: "l"
+  }
+})
+
+const allNames = [...newNamesWithResponse, ...menAndWomenNamesWithResponse];
+shuffle(allNames);
+
+
+/**************************************************************************************/
+
 /* Initialize jsPsych */
 let jsPsych = initJsPsych({
   on_finish: function () {
@@ -273,6 +303,7 @@ jsPsych.data.addProperties({
  expName: expName,
 });
 
+
 /************************************************************************************************ */
 
 /* Preload images */
@@ -296,6 +327,17 @@ let preloadNewFaces = {
 };
 timeline.push(preloadNewFaces);
 
+/* Fixation trial */
+let fixation = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: '<div style="font-size:60px;">+</div>',
+  choices: "NO_KEYS", // Prevent key press
+  trial_duration: 500, // Fixation duration
+  data: {
+    task: "fixation",
+  },
+};
+
 /* Welcome message trial */
 let welcome = {
   type: jsPsychHtmlKeyboardResponse,
@@ -306,6 +348,57 @@ timeline.push(welcome);
 
 /**************************************************************************************/
 
+/* Instructions for name presentation */
+let instructionsNamePresentation = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke A (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke L (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  `,
+  post_trial_gap: 500,
+};
+timeline.push(instructionsNamePresentation);
+
+/* Create stimuli array for name presentation */
+let name_recognition_stimuli = allNames.map((name) => {
+  return {
+    stimulus: `
+      <h2 class="names-experiment">${name.name}</h2>
+    `,
+    correct_response: name.correct_response
+  };
+});
+
+/* Name presentation trial */
+let testNames = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable("stimulus"),
+  choices: ['a', 'l'],
+  data: {
+    task: "response",
+    correct_response: jsPsych.timelineVariable("correct_response"),
+  },
+  on_finish: function (data) {
+    data.correct = jsPsych.pluginAPI.compareKeys(
+      data.response,
+      data.correct_response
+    );
+  },
+};
+
+/* Test procedure: fixation + name presentation */
+let test_names_procedure = {
+  timeline: [fixation, testNames],
+  timeline_variables: name_recognition_stimuli,
+  randomize_order: true, // Randomize name order
+};
+timeline.push(test_names_procedure);
+
+
+/**************************************************************************************/
 
 /* Instructions trial */
 let instructions = {
@@ -328,17 +421,6 @@ let test_stimuli = peopleImgsNames.map((person) => {
     `,
   };
 });
-
-/* Fixation trial */
-let fixation = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: '<div style="font-size:60px;">+</div>',
-  choices: "NO_KEYS", // Prevent key press
-  trial_duration: 500, // Fixation duration
-  data: {
-    task: "fixation",
-  },
-};
 
 /* Image presentation trial */
 let test = {
@@ -453,7 +535,7 @@ timeline.push(tetris);
 
 /**************************************************************************************/
 
-/* Instructions for Tetris */
+/* Instructions for image presentation */
 let instructionsimagepresentation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
@@ -498,7 +580,7 @@ let testFaces = {
 
 /* Test procedure: fixation + image presentation */
 let test_faces_procedure = {
-  timeline: [fixation, testObjects],
+  timeline: [fixation, testFaces],
   timeline_variables: face_recognition_stimuli,
   randomize_order: true, // Randomize image order
 };
