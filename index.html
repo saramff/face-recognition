@@ -13,10 +13,11 @@
     <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.0.0"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@2.0.0"></script>
     <script src="https://unpkg.com/@jspsych/plugin-call-function@2.0.0"></script>
-
+    
     <script defer type="module" src="main.js"></script>
     <script defer type="module" src="tetris.js"></script>
-
+    
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link
       href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css"
       rel="stylesheet"
@@ -40,6 +41,7 @@
 
         #game-container {
           display: block;
+          margin-top: 100px;
         }
 
         #game {
@@ -48,6 +50,10 @@
 
         .play-btn {
           cursor: pointer;
+          position: absolute;
+          left: 50%;
+          top: 15px;
+          transform: translateX(-50%);
         }
       }
 
@@ -72,6 +78,7 @@
 
       .names-experiment {
         font-size: 3rem;
+        font-weight: normal;
       }
     </style>
   </head>

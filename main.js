@@ -25,7 +25,7 @@ if (randomNumber < 0.5) {
 
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
-const IMAGES_PER_GENDER = 10; //96
+const IMAGES_PER_GENDER = 5; //96
 
 // Create pictures arrays for men and women images
 const menImages = Array.from(
@@ -83,8 +83,6 @@ shuffle(peopleImgsNames);
 
 // add correct_response to objects array
 correctObjects.forEach((object) => object.correct_response = correctKey);
-console.log(correctObjects);
-
 
 // create objects images array to preload them
 const objectsImgs = correctObjects.map((object) => object.img);
@@ -103,7 +101,7 @@ function getRandomSlice(array, sliceSize) {
 }
 
 // Define slice size & create men & women array copy not to alter the original ones
-const SLICE_SIZE = 4; //24
+const SLICE_SIZE = 2; //24
 const menCopy = [...menImgsNames];
 const womenCopy = [...womenImgsNames];
 
@@ -151,7 +149,7 @@ shuffle(peopleSlice);
 
 const NEW_PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_";
-const NEW_IMAGES = 10;
+const NEW_IMAGES = 5; //check how many
 
 // Create pictures array for new images
 const newImages = Array.from(
@@ -182,8 +180,8 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 const NAMES_PER_GENDER = 5 //24
 
-const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
-const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
+const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich"]//, "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
+const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara"]//, "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
 const newNames = [...newMenNames, ...newWomenNames];
 
 const newNamesWithResponse = newNames.map((name) => {
@@ -211,11 +209,7 @@ shuffle(allNames);
 /**************************************************************************************/
 
 /* Initialize jsPsych */
-let jsPsych = initJsPsych({
-  on_finish: function () {
-    jsPsych.data.displayData();
-  },
-});
+let jsPsych = initJsPsych();
 
 /* Create timeline */
 let timeline = [];
@@ -316,16 +310,6 @@ var demo2 = {
   }
 };
 timeline.push(demo2);
-
-// based on random Number:
-const vpNum = Math.floor(Math.random()*1000000);
-const expName = "Cognition-Sara"
-
-jsPsych.data.addProperties({
- subject: vpNum,
- expName: expName,
-});
-
 
 /************************************************************************************************ */
 
@@ -500,7 +484,7 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 60000, // Fixation duration
+  trial_duration: 10000, 
 };
 timeline.push(tetris);
 
@@ -613,8 +597,15 @@ timeline.push(test_names_procedure);
 
 /************************************************************************** */
 
- // Save Data
- function saveData(name, data){
+// Generate a random subject ID with 15 characters
+var subject_id = jsPsych.randomization.randomID(15);
+jsPsych.data.addProperties({
+  subject: subject_id,
+});
+
+
+// Save Data
+function saveData(name, data){
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'write_data.php'); 
   xhr.setRequestHeader('Content-Type', 'application/json');
@@ -625,7 +616,20 @@ var save_data_block = {
   type: jsPsychCallFunction,
   func: function(){saveData("data/Subject_"+ subject_id, jsPsych.data.get().csv());},
   timing_post_trial: 200
-}; 
+};
+timeline.push(save_data_block)
+
+
+// End of Experiment
+var end_of_experiment = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>Thank you for your participation!</p>
+    <p>Click <a href="https://app.prolific.com/submissions/complete?cc=CUA7JLWS">here</a> to return to Prolific and complete the study.</p>
+  `,
+  response_ends_trial: false
+};
+timeline.push(end_of_experiment);
 
 
 /* Run the experiment */
