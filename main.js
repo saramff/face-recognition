@@ -613,24 +613,20 @@ timeline.push(test_names_procedure);
 
 /************************************************************************** */
 
-/* START: save data */
-function saveData(name, data){
+ // Save Data
+ function saveData(name, data){
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'write_data.php');  
+  xhr.open('POST', 'write_data.php'); 
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({filename: name, filedata: data}));
-}
- 
-var save_data = {
-  type: jsPsychCallFunction,
-  func: function(){saveData(expName + "_" + vpNum, jsPsych.data.get().csv());},
-  timing_post_trial: 200
 };
 
-timeline.push(save_data);
+var save_data_block = {
+  type: jsPsychCallFunction,
+  func: function(){saveData("data/Subject_"+ subject_id, jsPsych.data.get().csv());},
+  timing_post_trial: 200
+}; 
+
 
 /* Run the experiment */
 jsPsych.run(timeline);
-
-console.log("get", jsPsych.data.get());
-console.log("csv", jsPsych.data.get().csv());
