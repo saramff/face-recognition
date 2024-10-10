@@ -41,8 +41,8 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 // Create name arrays for men and women
-const menNames = ["Peter", "Wolfgang", "Michael", "Werner", "Klaus", "Thomas", "Manfred", "Helmut", "Jürgen", "Heinz", "Gerhard", "Andreas", "Hans", "Josef", "Günter", "Dieter", "Horst", "Walter", "Frank", "Bernd", "Karl", "Herbert", "Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Jörg", "Ralf", "Erich", "Norbert", "Bernhard", "Willi", "Alexander", "Ulrich", "Markus", "Matthias", "Harald", "Paul", "Roland", "Ernst", "Reinhard", "Günther", "Gerd", "Fritz", "Otto", "Friedrich", "Erwin", "Lothar", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Hubert", "Udo", "Holger", "Albert", "Ludwig", "Dietmar", "Hartmut", "Reinhold", "Adolf", "Detlef", "Oliver", "Christoph", "Stephan", "Axel", "Reiner", "Alois", "Eberhard", "Heiko", "Daniel", "Sven", "Bruno", "Olaf", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten"];
-const womenNames = ["Emilia", "Mia", "Sophia", "Mila", "Emma", "Hannah", "Lea", "Ella", "Lina", "Clar", "Marie", "Leni", "Lia", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Amelie", "Ida", "Frieda", "Mira", "Charlotte", "Malia", "Neele", "Sophie", "Juna", "Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Amelia", "Malea", "Marlene", "Mina", "Malina", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Maila", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Emelie", "Marla", "Melissa", "Malou", "Livia", "Ronja", "Ayla", "Emm", "Leila"];
+const menNames = ["Peter", "Wolfgang", "Michael", "Werner", "Klaus", "Thomas", "Manfred", "Helmut", "Jürgen", "Heinz", "Gerhard", "Andreas", "Hans", "Josef", "Günter", "Dieter", "Horst", "Walter", "Frank", "Bernd", "Karl", "Herbert", "Jörg", "Ralf", "Erich", "Norbert", "Bernhard", "Willi", "Alexander", "Ulrich", "Markus", "Matthias", "Harald", "Paul", "Roland", "Ernst", "Reinhard", "Günther", "Gerd", "Fritz", "Otto", "Friedrich", "Erwin", "Lothar", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Hubert", "Udo", "Holger", "Albert", "Ludwig", "Dietmar", "Hartmut", "Reinhold", "Adolf", "Detlef", "Oliver", "Christoph", "Stephan", "Axel", "Reiner", "Alois", "Eberhard", "Heiko", "Daniel", "Sven", "Bruno", "Olaf", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", "Theo", "Emil", "Guido", "Arno", "Marc", "Gustav", "Florian", "Dietrich", "Theodor", "Rene", "Artur", "August", "Edmund", "Arnold"];
+const womenNames = ["Emilia", "Mia", "Sophia", "Mila", "Emma", "Hannah", "Lea", "Ella", "Lina", "Clar", "Marie", "Leni", "Lia", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Amelie", "Ida", "Frieda", "Mira", "Charlotte", "Malia", "Neele", "Sophie", "Juna", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Amelia", "Malea", "Marlene", "Mina", "Malina", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Maila", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Emelie", "Marla", "Melissa", "Malou", "Livia", "Ronja", "Ayla", "Emm", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Marleen", "Sina", "Frida", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Alissa", "Yara", "Selma"];
 
 // Create suffle function - suffles array index randomly
 function shuffle(array) {
@@ -180,10 +180,10 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 /**************************************************************************************/
 
-const NAMES_PER_GENDER = 5
+const NAMES_PER_GENDER = 5 //24
 
-const newMenNames = ["aaa", "bbb", "ccc", "ddd", "eee"];
-const newWomenNames = ["111", "222", "333", "444", "555"];
+const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
+const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
 const newNames = [...newMenNames, ...newWomenNames];
 
 const newNamesWithResponse = newNames.map((name) => {
@@ -377,6 +377,7 @@ let instructions = {
   stimulus: `
     <p>In diesem Experiment werden nacheinander automatisch Gesichter angezeigt.</p>
     <p>Bitte achte genau auf jedes Gesicht und seinen Namen.</p>
+    <p>Du musst nichts tun. Die Gesichter erscheinen von selbst und du brauchst nichts weiter zu tun, außer aufmerksam zu sein.</p>
     <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
   `,
   post_trial_gap: 500,
@@ -421,7 +422,7 @@ let instructionsrecognition = {
     <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
     <p>Drücke '${correctKey.toUpperCase()}', wenn der Satz falsch ist, und '${incorrectKey.toUpperCase()}', wenn der Satz richtig ist.</p>
     </p></p>
-    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke 'A' (NEIN).</p>
+    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke '${incorrectKey.toUpperCase()}' (NEIN).</p>
     <br />
     <div>
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class="img-instructions" />
@@ -480,7 +481,7 @@ timeline.push(test_objects_procedure);
 let instructionstetris = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Jetzt wirst du für eine Weile Tetris spielen.</p>
+    <p>Jetzt wirst du für etwa 20 Minuten Tetris spielen.</p>
     <p>Benutze die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
     </p></p>
     <p>Drücke die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicke auf 'Play', um das Spiel zu starten.</p>
@@ -564,10 +565,10 @@ timeline.push(test_faces_procedure);
 let instructionsNamePresentation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    <p>Als Nächstes wirst du eine Reihe von Namen auf dem Bildschirm sehen.</p>
     </p></p>
-    <p>Wenn du das Gesicht zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
-    <p>Wenn du das Gesicht nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
+    <p>Wenn du das Namen zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
+    <p>Wenn du das Namen nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
     <p>Drücke eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,
