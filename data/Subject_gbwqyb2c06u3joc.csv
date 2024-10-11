@@ -1,0 +1,269 @@
+"rt","url","trial_type","trial_index","plugin_version","time_elapsed","subject","fullscreen","age","gender","handedness","language","success","type","response","question_order","timeout","failed_images","failed_audio","failed_video","stimulus","task","correct_response","correct"
+"8033","consentA2.html","external-html","0","2.0.0","8051","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","","","","","","","","","",""
+"1858","","fullscreen","1","2.0.0","10925","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","true","","","","","","","","","","",""
+"3256","","survey-text","2","2.0.0","14187","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","demo","{""Q0"":""18""}","","","","","","","","",""
+"12228","","survey-multi-choice","3","2.0.0","26418","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","{""gender"":""weiblich"",""handedness"":""links"",""language"":""Deutsch""}","[0,1,2]","","","","","","","",""
+"","","preload","4","2.0.0","26794","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"","","preload","5","2.0.0","27058","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"","","preload","6","2.0.0","27260","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"734","","html-keyboard-response","7","2.0.0","27995","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","",""," ","","","","","","Willkommen zum Experiment. Drücken Sie eine beliebige Taste, um zu beginnen.","","",""
+"411","","html-keyboard-response","8","2.0.0","28407","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","",""," ","","","","","","
+    <p>In diesem Experiment werden nacheinander automatisch Gesichter angezeigt.</p>
+    <p>Bitte achte genau auf jedes Gesicht und seinen Namen.</p>
+    <p>Du musst nichts tun. Die Gesichter erscheinen von selbst und du brauchst nichts weiter zu tun, außer aufmerksam zu sein.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
+  ","","",""
+"null","","html-keyboard-response","9","2.0.0","29437","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","10","2.0.0","30448","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_5.jpg"">
+      <p class=""person-name"">Mathilda</p>
+    ","","",""
+"null","","html-keyboard-response","11","2.0.0","31475","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","12","2.0.0","32489","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_3.jpg"">
+      <p class=""person-name"">Michael</p>
+    ","","",""
+"null","","html-keyboard-response","13","2.0.0","33507","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","14","2.0.0","34516","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_2.jpg"">
+      <p class=""person-name"">Sophie</p>
+    ","","",""
+"null","","html-keyboard-response","15","2.0.0","35539","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","16","2.0.0","36550","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+      <p class=""person-name"">Walter</p>
+    ","","",""
+"null","","html-keyboard-response","17","2.0.0","37571","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","18","2.0.0","38581","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_5.jpg"">
+      <p class=""person-name"">Heinz</p>
+    ","","",""
+"null","","html-keyboard-response","19","2.0.0","39600","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","20","2.0.0","40614","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+      <p class=""person-name"">Hannah</p>
+    ","","",""
+"null","","html-keyboard-response","21","2.0.0","41625","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","22","2.0.0","42638","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_2.jpg"">
+      <p class=""person-name"">Günter</p>
+    ","","",""
+"null","","html-keyboard-response","23","2.0.0","43652","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","24","2.0.0","44665","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_3.jpg"">
+      <p class=""person-name"">Finja</p>
+    ","","",""
+"null","","html-keyboard-response","25","2.0.0","45688","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","26","2.0.0","46699","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_1.jpg"">
+      <p class=""person-name"">Christoph</p>
+    ","","",""
+"null","","html-keyboard-response","27","2.0.0","47726","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","28","2.0.0","48738","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_1.jpg"">
+      <p class=""person-name"">Marta</p>
+    ","","",""
+"5992","","html-keyboard-response","29","2.0.0","55233","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","",""," ","","","","","","
+    <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
+    <p>Drücke 'L', wenn der Satz falsch ist, und 'A', wenn der Satz richtig ist.</p>
+    </p></p>
+    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke 'A' (NEIN).</p>
+    <br />
+    <div>
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class=""img-instructions"" />
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Teddy.jpg' class=""img-instructions"" />
+    </div>
+    <br />
+    <p>Drücke eine beliebige Taste, um zu beginnen.</p>
+  ","","",""
+"null","","html-keyboard-response","30","2.0.0","56252","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"243","","html-keyboard-response","31","2.0.0","56497","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/chair.jpg"">
+      </div>
+      <p class=""person-name"">Hannah hat einen Ventilator.</p>
+    ","response","a","true"
+"null","","html-keyboard-response","32","2.0.0","57000","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"495","","html-keyboard-response","33","2.0.0","57497","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_1.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/milk.jpg"">
+      </div>
+      <p class=""person-name"">Christoph hat einen Kühlschrank.</p>
+    ","response","a","true"
+"null","","html-keyboard-response","34","2.0.0","58012","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"359","","html-keyboard-response","35","2.0.0","58373","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/ball.jpg"">
+      </div>
+      <p class=""person-name"">Walter hat einen Ball.</p>
+    ","response","l","false"
+"null","","html-keyboard-response","36","2.0.0","58880","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"328","","html-keyboard-response","37","2.0.0","59210","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_2.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/belt.jpg"">
+      </div>
+      <p class=""person-name"">Sophie hat einen Gürtel.</p>
+    ","response","l","false"
+"775","","html-keyboard-response","38","2.0.0","59986","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+    <p>Jetzt wirst du für etwa 20 Minuten Tetris spielen.</p>
+    <p>Benutze die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
+    </p></p>
+    <p>Drücke die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicke auf 'Play', um das Spiel zu starten.</p>
+    <p>Wenn du verlierst, wähle 'Try again', um das Spiel neu zu starten. Du wirst auf diese Weise spielen, bis die Zeit abläuft.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","39","2.0.0","75514","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","
+    <div class=""tetris-visible""></div>
+  ","","",""
+"4763","","html-keyboard-response","40","2.0.0","80794","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","",""," ","","","","","","
+    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke 'L' (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke 'A' (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","41","2.0.0","81803","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"127","","html-keyboard-response","42","2.0.0","81931","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_3.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","43","2.0.0","82447","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"226","","html-keyboard-response","44","2.0.0","82674","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_4.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","45","2.0.0","83176","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"160","","html-keyboard-response","46","2.0.0","83338","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_2.jpg"">
+      </div>
+    ","response","l","false"
+"null","","html-keyboard-response","47","2.0.0","83852","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"755","","html-keyboard-response","48","2.0.0","84608","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_1.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","49","2.0.0","85112","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"355","","html-keyboard-response","50","2.0.0","85468","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_2.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","51","2.0.0","85974","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"207","","html-keyboard-response","52","2.0.0","86182","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_1.jpg"">
+      </div>
+    ","response","l","false"
+"null","","html-keyboard-response","53","2.0.0","86689","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"51","","html-keyboard-response","54","2.0.0","86741","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_5.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","55","2.0.0","87245","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"3085","","html-keyboard-response","56","2.0.0","90332","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+      </div>
+    ","response","l","false"
+"null","","html-keyboard-response","57","2.0.0","90840","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"611","","html-keyboard-response","58","2.0.0","91452","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+      </div>
+    ","response","l","false"
+"2222","","html-keyboard-response","59","2.0.0","93675","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","",""," ","","","","","","
+    <p>Als Nächstes wirst du eine Reihe von Namen auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Namen zuvor gesehen hast, drücke 'L' (ja).</p>
+    <p>Wenn du das Namen nicht gesehen hast, drücke 'A' (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","60","2.0.0","94694","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"293","","html-keyboard-response","61","2.0.0","94988","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Sven</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","62","2.0.0","95502","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"371","","html-keyboard-response","63","2.0.0","95874","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Emm</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","64","2.0.0","96377","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"279","","html-keyboard-response","65","2.0.0","96657","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Greta</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","66","2.0.0","97160","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"250","","html-keyboard-response","67","2.0.0","97411","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Florian</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","68","2.0.0","97922","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"232","","html-keyboard-response","69","2.0.0","98155","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Georg</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","70","2.0.0","98671","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"203","","html-keyboard-response","71","2.0.0","98874","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Johanna</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","72","2.0.0","99386","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"245","","html-keyboard-response","73","2.0.0","99632","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Christoph</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","74","2.0.0","100135","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"249","","html-keyboard-response","75","2.0.0","100386","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Stella</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","76","2.0.0","100898","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"204","","html-keyboard-response","77","2.0.0","101103","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Franz</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","78","2.0.0","101615","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"214","","html-keyboard-response","79","2.0.0","101830","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Lara</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","80","2.0.0","102332","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"267","","html-keyboard-response","81","2.0.0","102599","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Martin</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","82","2.0.0","103112","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"234","","html-keyboard-response","83","2.0.0","103347","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Reiner</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","84","2.0.0","103862","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"241","","html-keyboard-response","85","2.0.0","104104","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Anna</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","86","2.0.0","104607","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"366","","html-keyboard-response","87","2.0.0","104975","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Mara</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","88","2.0.0","105484","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"296","","html-keyboard-response","89","2.0.0","105782","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Elisa</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","90","2.0.0","106294","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"290","","html-keyboard-response","91","2.0.0","106585","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Heinrich</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","92","2.0.0","107090","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"325","","html-keyboard-response","93","2.0.0","107416","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Uwe</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","94","2.0.0","107920","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"263","","html-keyboard-response","95","2.0.0","108184","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Mario</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","96","2.0.0","108696","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"150","","html-keyboard-response","97","2.0.0","108847","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Bianca</h2>
+    ","response","a","true"
+"null","","html-keyboard-response","98","2.0.0","109350","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"224","","html-keyboard-response","99","2.0.0","109575","gbwqyb2c06u3joc","true","18","weiblich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Ella</h2>
+    ","response","a","true"

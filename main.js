@@ -419,7 +419,7 @@ let instructionsrecognition = {
 };
 timeline.push(instructionsrecognition);
 
-/* Create stimuli array for image presentation */
+/* Create stimuli array for object presentation */
 let test_objects_stimuli = peopleSlice.map((person) => {
   return {
     stimulus: `
@@ -433,13 +433,13 @@ let test_objects_stimuli = peopleSlice.map((person) => {
   };
 });
 
-/* Image presentation trial */
+/* Object presentation trial */
 let testObjects = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: ['a', 'l'],
   data: {
-    task: "response",
+    task: "response object presentation",
     correct_response: jsPsych.timelineVariable("correct_response"),
   },
   on_finish: function (data) {
@@ -450,11 +450,11 @@ let testObjects = {
   },
 };
 
-/* Test procedure: fixation + image presentation */
+/* Test procedure: fixation + object presentation */
 let test_objects_procedure = {
   timeline: [fixation, testObjects],
   timeline_variables: test_objects_stimuli,
-  randomize_order: true, // Randomize image order
+  randomize_order: true, // Randomize object order
 };
 timeline.push(test_objects_procedure);
 
@@ -484,15 +484,15 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 10000, 
+  trial_duration: 15000, 
 };
 timeline.push(tetris);
 
 
 /**************************************************************************************/
 
-/* Instructions for image presentation */
-let instructionsimagepresentation = {
+/* Instructions for faces presentation */
+let instructionsFacesPresentation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
@@ -503,9 +503,9 @@ let instructionsimagepresentation = {
   `,
   post_trial_gap: 500,
 };
-timeline.push(instructionsimagepresentation);
+timeline.push(instructionsFacesPresentation);
 
-/* Create stimuli array for image presentation */
+/* Create stimuli array for faces presentation */
 let face_recognition_stimuli = recognitionFaces.map((face) => {
   return {
     stimulus: `
@@ -517,13 +517,13 @@ let face_recognition_stimuli = recognitionFaces.map((face) => {
   };
 });
 
-/* Image presentation trial */
+/* Faces presentation trial */
 let testFaces = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: ['a', 'l'],
   data: {
-    task: "response",
+    task: "response faces test",
     correct_response: jsPsych.timelineVariable("correct_response"),
   },
   on_finish: function (data) {
@@ -534,11 +534,11 @@ let testFaces = {
   },
 };
 
-/* Test procedure: fixation + image presentation */
+/* Test procedure: fixation + faces presentation */
 let test_faces_procedure = {
   timeline: [fixation, testFaces],
   timeline_variables: face_recognition_stimuli,
-  randomize_order: true, // Randomize image order
+  randomize_order: true, // Randomize faces order
 };
 timeline.push(test_faces_procedure);
 
@@ -575,7 +575,7 @@ let testNames = {
   stimulus: jsPsych.timelineVariable("stimulus"),
   choices: ['a', 'l'],
   data: {
-    task: "response",
+    task: "response name test",
     correct_response: jsPsych.timelineVariable("correct_response"),
   },
   on_finish: function (data) {
@@ -604,12 +604,16 @@ jsPsych.data.addProperties({
 });
 
 
-// Save Data
 function saveData(name, data){
+  console.log("Funci�n saveData llamada");
+  console.log("Guardando datos:", name, data);
+
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'write_data.php'); 
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({filename: name, filedata: data}));
+
+  console.log("Datos enviados");
 };
 
 var save_data_block = {
@@ -617,19 +621,33 @@ var save_data_block = {
   func: function(){saveData("data/Subject_"+ subject_id, jsPsych.data.get().csv());},
   timing_post_trial: 200
 };
+
 timeline.push(save_data_block)
 
 
-// End of Experiment
-var end_of_experiment = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <p>Thank you for your participation!</p>
-    <p>Click <a href="https://app.prolific.com/submissions/complete?cc=CUA7JLWS">here</a> to return to Prolific and complete the study.</p>
-  `,
-  response_ends_trial: false
+var verguetungsfrage = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: '<div class="custom-style">Sie haben das Ende der Studie erreicht. Vielen Dank, dass Sie teilgenommen haben. Welche Verg&uumltung m&oumlchten Sie f&uumlr dieses Experiment?</div>',
+  choices: ['<div style="font-size:24px;">VP-Stunde (1/2)', '<div style="font-size:24px;">Gewinnspiel</div>'],
+  on_finish: function(data) {
+    if(data.response == 0) {
+        window.location.href = 'verguetung_b.html';
+    } else {
+        window.location.href = 'verguetung_a.html';
+    }
+  }
 };
-timeline.push(end_of_experiment);
+
+ 
+timeline.push(verguetungsfrage);
+
+
+//var html_block_bezahlung = {
+//  type: jsPsychExternalHtml,
+//  url: "verguetung.html"
+//};
+
+//timeline.push(html_block_bezahlung);
 
 
 /* Run the experiment */

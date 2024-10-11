@@ -1,0 +1,12 @@
+Datos recibidos. Nombre del archivo: data/Subject_wzex9m07fes9y9a.csv
+Datos guardados correctamente en: data/Subject_wzex9m07fes9y9a.csv
+Datos recibidos. Nombre del archivo: data/Subject_j2reh2b6bh6rb08.csv
+Datos guardados correctamente en: data/Subject_j2reh2b6bh6rb08.csv
+Datos recibidos. Nombre del archivo: data/Subject_35r3zsbefy59op1.csv
+Datos guardados correctamente en: data/Subject_35r3zsbefy59op1.csv
+Datos recibidos. Nombre del archivo: data/Subject_gbwqyb2c06u3joc.csv
+Datos guardados correctamente en: data/Subject_gbwqyb2c06u3joc.csv
+Datos recibidos. Nombre del archivo: data/Subject_yev7el0fpmr3pzx.csv
+Datos guardados correctamente en: data/Subject_yev7el0fpmr3pzx.csv
+Datos recibidos. Nombre del archivo: data/Subject_f7wncwqrtdf914z.csv
+Datos guardados correctamente en: data/Subject_f7wncwqrtdf914z.csv

@@ -1,0 +1,269 @@
+"rt","url","trial_type","trial_index","plugin_version","time_elapsed","subject","fullscreen","age","gender","handedness","language","success","type","response","question_order","timeout","failed_images","failed_audio","failed_video","stimulus","task","correct_response","correct"
+"4936","consentA2.html","external-html","0","2.0.0","4984","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","","","","","","","","","",""
+"1693","","fullscreen","1","2.0.0","7692","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","true","","","","","","","","","","",""
+"3473","","survey-text","2","2.0.0","11168","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","demo","{""Q0"":""10""}","","","","","","","","",""
+"4715","","survey-multi-choice","3","2.0.0","15884","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","{""gender"":""m&aumlnnlich"",""handedness"":""links"",""language"":""Deutsch""}","[0,1,2]","","","","","","","",""
+"","","preload","4","2.0.0","16736","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"","","preload","5","2.0.0","17217","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"","","preload","6","2.0.0","17505","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","true","","","","false","[]","[]","[]","","","",""
+"689","","html-keyboard-response","7","2.0.0","18195","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","Enter","","","","","","Willkommen zum Experiment. Drücken Sie eine beliebige Taste, um zu beginnen.","","",""
+"479","","html-keyboard-response","8","2.0.0","18675","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","Enter","","","","","","
+    <p>In diesem Experiment werden nacheinander automatisch Gesichter angezeigt.</p>
+    <p>Bitte achte genau auf jedes Gesicht und seinen Namen.</p>
+    <p>Du musst nichts tun. Die Gesichter erscheinen von selbst und du brauchst nichts weiter zu tun, außer aufmerksam zu sein.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
+  ","","",""
+"null","","html-keyboard-response","9","2.0.0","19685","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","10","2.0.0","20695","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_5.jpg"">
+      <p class=""person-name"">Michael</p>
+    ","","",""
+"null","","html-keyboard-response","11","2.0.0","21704","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","12","2.0.0","22717","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_2.jpg"">
+      <p class=""person-name"">Gerhard</p>
+    ","","",""
+"null","","html-keyboard-response","13","2.0.0","23737","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","14","2.0.0","24746","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+      <p class=""person-name"">Viola</p>
+    ","","",""
+"null","","html-keyboard-response","15","2.0.0","25758","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","16","2.0.0","26767","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_5.jpg"">
+      <p class=""person-name"">Sophia</p>
+    ","","",""
+"null","","html-keyboard-response","17","2.0.0","27781","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","18","2.0.0","28782","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_2.jpg"">
+      <p class=""person-name"">Katharina</p>
+    ","","",""
+"null","","html-keyboard-response","19","2.0.0","29794","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","20","2.0.0","30807","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_1.jpg"">
+      <p class=""person-name"">Elisabeth</p>
+    ","","",""
+"null","","html-keyboard-response","21","2.0.0","31816","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","22","2.0.0","32820","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_1.jpg"">
+      <p class=""person-name"">Josef</p>
+    ","","",""
+"null","","html-keyboard-response","23","2.0.0","33828","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","24","2.0.0","34839","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_3.jpg"">
+      <p class=""person-name"">Alma</p>
+    ","","",""
+"null","","html-keyboard-response","25","2.0.0","35851","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","26","2.0.0","36866","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+      <p class=""person-name"">Edmund</p>
+    ","","",""
+"null","","html-keyboard-response","27","2.0.0","37888","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"null","","html-keyboard-response","28","2.0.0","38897","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+      <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_3.jpg"">
+      <p class=""person-name"">Andreas</p>
+    ","","",""
+"1739","","html-keyboard-response","29","2.0.0","41139","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+    <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
+    <p>Drücke 'L', wenn der Satz falsch ist, und 'A', wenn der Satz richtig ist.</p>
+    </p></p>
+    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke 'A' (NEIN).</p>
+    <br />
+    <div>
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class=""img-instructions"" />
+      <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Teddy.jpg' class=""img-instructions"" />
+    </div>
+    <br />
+    <p>Drücke eine beliebige Taste, um zu beginnen.</p>
+  ","","",""
+"null","","html-keyboard-response","30","2.0.0","42151","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"402","","html-keyboard-response","31","2.0.0","42555","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_5.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/pizza.jpg"">
+      </div>
+      <p class=""person-name"">Michael hat eine Pizza.</p>
+    ","response","l","true"
+"null","","html-keyboard-response","32","2.0.0","43057","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"218","","html-keyboard-response","33","2.0.0","43275","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_3.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/magnifying-glass.jpg"">
+      </div>
+      <p class=""person-name"">Alma hat einen Teppich.</p>
+    ","response","a","false"
+"null","","html-keyboard-response","34","2.0.0","43787","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"207","","html-keyboard-response","35","2.0.0","43995","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/ball.jpg"">
+      </div>
+      <p class=""person-name"">Viola hat einen Ball.</p>
+    ","response","l","true"
+"null","","html-keyboard-response","36","2.0.0","44501","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"245","","html-keyboard-response","37","2.0.0","44746","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+        <img class=""object-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/objects/piggy-bank.jpg"">
+      </div>
+      <p class=""person-name"">Edmund hat ein Bügeleisen.</p>
+    ","response","a","false"
+"4463","","html-keyboard-response","38","2.0.0","49210","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+    <p>Jetzt wirst du für etwa 20 Minuten Tetris spielen.</p>
+    <p>Benutze die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
+    </p></p>
+    <p>Drücke die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicke auf 'Play', um das Spiel zu starten.</p>
+    <p>Wenn du verlierst, wähle 'Try again', um das Spiel neu zu starten. Du wirst auf diese Weise spielen, bis die Zeit abläuft.</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","39","2.0.0","64718","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","
+    <div class=""tetris-visible""></div>
+  ","","",""
+"1304","","html-keyboard-response","40","2.0.0","66523","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","ArrowDown","","","","","","
+    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Gesicht zuvor gesehen hast, drücke 'L' (ja).</p>
+    <p>Wenn du das Gesicht nicht gesehen hast, drücke 'A' (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","41","2.0.0","67525","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"3365","","html-keyboard-response","42","2.0.0","70891","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_5.jpg"">
+      </div>
+    ","response","a","false"
+"null","","html-keyboard-response","43","2.0.0","71392","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"146","","html-keyboard-response","44","2.0.0","71538","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_4.jpg"">
+      </div>
+    ","response","l","true"
+"null","","html-keyboard-response","45","2.0.0","72039","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"194","","html-keyboard-response","46","2.0.0","72234","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_3.jpg"">
+      </div>
+    ","response","a","false"
+"null","","html-keyboard-response","47","2.0.0","72736","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"385","","html-keyboard-response","48","2.0.0","73122","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_2.jpg"">
+      </div>
+    ","response","a","true"
+"null","","html-keyboard-response","49","2.0.0","73624","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"210","","html-keyboard-response","50","2.0.0","73834","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//women/woman_3.jpg"">
+      </div>
+    ","response","l","true"
+"null","","html-keyboard-response","51","2.0.0","74337","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"233","","html-keyboard-response","52","2.0.0","74570","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_5.jpg"">
+      </div>
+    ","response","l","false"
+"null","","html-keyboard-response","53","2.0.0","75071","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"162","","html-keyboard-response","54","2.0.0","75234","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master//men/man_4.jpg"">
+      </div>
+    ","response","l","true"
+"null","","html-keyboard-response","55","2.0.0","75735","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"219","","html-keyboard-response","56","2.0.0","75954","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_4.jpg"">
+      </div>
+    ","response","a","false"
+"null","","html-keyboard-response","57","2.0.0","76455","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"179","","html-keyboard-response","58","2.0.0","76635","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","a","","","","","","
+      <div class=""imgs-container"">
+        <img class=""person-img"" src=""https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_1.jpg"">
+      </div>
+    ","response","a","true"
+"623","","html-keyboard-response","59","2.0.0","77258","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+    <p>Als Nächstes wirst du eine Reihe von Namen auf dem Bildschirm sehen.</p>
+    </p></p>
+    <p>Wenn du das Namen zuvor gesehen hast, drücke 'L' (ja).</p>
+    <p>Wenn du das Namen nicht gesehen hast, drücke 'A' (nein).</p>
+    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+  ","","",""
+"null","","html-keyboard-response","60","2.0.0","78259","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"1343","","html-keyboard-response","61","2.0.0","79602","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Lea</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","62","2.0.0","80104","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"163","","html-keyboard-response","63","2.0.0","80267","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Uwe</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","64","2.0.0","80768","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"178","","html-keyboard-response","65","2.0.0","80947","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Fritz</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","66","2.0.0","81448","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"162","","html-keyboard-response","67","2.0.0","81610","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","a","","","","","","
+      <h2 class=""names-experiment"">Georg</h2>
+    ","response","l","false"
+"null","","html-keyboard-response","68","2.0.0","82111","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"139","","html-keyboard-response","69","2.0.0","82251","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Robert</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","70","2.0.0","82753","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"177","","html-keyboard-response","71","2.0.0","82930","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Franz</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","72","2.0.0","83433","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"129","","html-keyboard-response","73","2.0.0","83563","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Fiona</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","74","2.0.0","84063","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"138","","html-keyboard-response","75","2.0.0","84202","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Johanna</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","76","2.0.0","84704","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"146","","html-keyboard-response","77","2.0.0","84850","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Markus</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","78","2.0.0","85351","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"130","","html-keyboard-response","79","2.0.0","85482","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Marla</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","80","2.0.0","85983","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"131","","html-keyboard-response","81","2.0.0","86114","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Elisa</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","82","2.0.0","86615","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"124","","html-keyboard-response","83","2.0.0","86739","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Reinhard</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","84","2.0.0","87240","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"138","","html-keyboard-response","85","2.0.0","87378","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Martin</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","86","2.0.0","87879","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"107","","html-keyboard-response","87","2.0.0","87986","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Heinrich</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","88","2.0.0","88488","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"90","","html-keyboard-response","89","2.0.0","88578","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Emma</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","90","2.0.0","89079","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"147","","html-keyboard-response","91","2.0.0","89226","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Mara</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","92","2.0.0","89728","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"66","","html-keyboard-response","93","2.0.0","89794","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Anna</h2>
+    ","response","l","true"
+"null","","html-keyboard-response","94","2.0.0","90295","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"107","","html-keyboard-response","95","2.0.0","90402","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Udo</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","96","2.0.0","90903","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"114","","html-keyboard-response","97","2.0.0","91018","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Anouk</h2>
+    ","response","a","false"
+"null","","html-keyboard-response","98","2.0.0","91520","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","null","","","","","","<div style=""font-size:60px;"">+</div>","fixation","",""
+"90","","html-keyboard-response","99","2.0.0","91610","f7wncwqrtdf914z","true","10","m&aumlnnlich","links","Deutsch","","","l","","","","","","
+      <h2 class=""names-experiment"">Lara</h2>
+    ","response","l","true"
