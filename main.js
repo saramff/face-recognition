@@ -25,7 +25,7 @@ if (randomNumber < 0.5) {
 
 const PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/";
-const IMAGES_PER_GENDER = 5; //96
+const IMAGES_PER_GENDER = 96;
 
 // Create pictures arrays for men and women images
 const menImages = Array.from(
@@ -101,7 +101,7 @@ function getRandomSlice(array, sliceSize) {
 }
 
 // Define slice size & create men & women array copy not to alter the original ones
-const SLICE_SIZE = 2; //24
+const SLICE_SIZE = 24;
 const menCopy = [...menImgsNames];
 const womenCopy = [...womenImgsNames];
 
@@ -149,7 +149,7 @@ shuffle(peopleSlice);
 
 const NEW_PEOPLE_URL =
   "https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/new-faces/newface_";
-const NEW_IMAGES = 5; //check how many
+const NEW_IMAGES = 48;
 
 // Create pictures array for new images
 const newImages = Array.from(
@@ -178,7 +178,7 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 /**************************************************************************************/
 
-const NAMES_PER_GENDER = 5 //24
+const NAMES_PER_GENDER = 24
 
 const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich"]//, "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
 const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara"]//, "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
