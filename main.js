@@ -180,8 +180,8 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 const NAMES_PER_GENDER = 24
 
-const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich"]//, "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
-const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara"]//, "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
+const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
+const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
 const newNames = [...newMenNames, ...newWomenNames];
 
 const newNamesWithResponse = newNames.map((name) => {
@@ -484,7 +484,7 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 15000, 
+  trial_duration: 1200000, 
 };
 timeline.push(tetris);
 
@@ -605,7 +605,7 @@ jsPsych.data.addProperties({
 
 
 function saveData(name, data){
-  console.log("Funci�n saveData llamada");
+  console.log("Función saveData llamada");
   console.log("Guardando datos:", name, data);
 
   var xhr = new XMLHttpRequest();
