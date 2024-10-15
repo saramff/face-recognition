@@ -441,6 +441,7 @@ let testObjects = {
   data: {
     task: "response object presentation",
     correct_response: jsPsych.timelineVariable("correct_response"),
+    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
@@ -525,6 +526,7 @@ let testFaces = {
   data: {
     task: "response faces test",
     correct_response: jsPsych.timelineVariable("correct_response"),
+    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
@@ -577,6 +579,7 @@ let testNames = {
   data: {
     task: "response name test",
     correct_response: jsPsych.timelineVariable("correct_response"),
+    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
