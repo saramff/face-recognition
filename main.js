@@ -218,6 +218,7 @@ let timeline = [];
 //                           Consent                                  //
 //                           (!works only on server)                  //  
 ////////////////////////////////////////////////////////////////////////
+
 let check_consent = (elem) => {
   if (document.getElementById('consent_checkbox').checked) {
     return true;
@@ -311,7 +312,7 @@ var demo2 = {
 };
 timeline.push(demo2);
 
-/************************************************************************************************ */
+// /************************************************************************************************ */
 
 /* Preload images */
 let preload = {
@@ -353,7 +354,7 @@ let welcome = {
 timeline.push(welcome);
 
 
-/**************************************************************************************/
+// /**************************************************************************************/
 
 /* Instructions trial */
 let instructions = {
@@ -441,13 +442,13 @@ let testObjects = {
   data: {
     task: "response object presentation",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
@@ -526,13 +527,13 @@ let testFaces = {
   data: {
     task: "response faces test",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
@@ -579,13 +580,13 @@ let testNames = {
   data: {
     task: "response name test",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
