@@ -3,7 +3,7 @@ const IMG_URL =
 
 export const correctObjects = [
   {
-    sentence: "hat eine Sparbüchse.", //"has a piggy bank.",
+    sentence: "hat eine Sparschwein.", //"has a piggy bank.",
     img: `${IMG_URL}piggy-bank.jpg`
   },
   {
@@ -43,13 +43,13 @@ export const correctObjects = [
     img: `${IMG_URL}hairbrush.jpg`
   },
   {
-    sentence: "has a magnifying glass.", 
+    sentence: "hat eine Lupe.", 
     img: `${IMG_URL}magnifying-glass.jpg`, 
     correct_response: "a",
   },
   {
-    sentence: "hat eine Haarbürste.", //"has a hairbrush.",
-    img: `${IMG_URL}hairbrush.jpg`
+    sentence: "hat ein Paar Stiefel.", //"has some boots.",
+    img: `${IMG_URL}boots.jpg`
   },
   { sentence: "hat eine Gitarre.", //"has a guitar.",
     img: `${IMG_URL}guitar.jpg`, 
@@ -105,7 +105,7 @@ export const correctObjects = [
     correct_response: "a" 
   },
   { 
-    sentence: "hat einen Ballon.", //has a balloon.", 
+    sentence: "hat einen Luftballon.", //has a balloon.", 
     img: `${IMG_URL}balloon.jpg`, 
     correct_response: "a" 
   },
@@ -120,7 +120,7 @@ export const correctObjects = [
     correct_response: "a" 
   },
   { 
-    sentence: "hat einen Computer.", //has a computer.", 
+    sentence: "hat einen Bildschirm.", //has a screen.", 
     img: `${IMG_URL}screen.jpg`, 
     correct_response: "a" 
   },
@@ -190,7 +190,7 @@ export const correctObjects = [
     correct_response: "a" 
   },
   { 
-    sentence: "hat eine Uhr.", //has a watch.", 
+    sentence: "hat eine Armbanduhr.", //has a watch.", 
     img: `${IMG_URL}watch.jpg`, 
     correct_response: "a" 
   },
@@ -252,7 +252,7 @@ export const incorrectObjects = [
   "hat einen Rucksack.", //has a backpack.",
   "hat einen Spiegel.", //has a mirror.",
   "hat einen Hefter.", //has a stapler.",
-  "hat ein Schloss.", //has a lock.",
+  "hat ein Vorhängeschloss.", //has a lock.",
   "hat einen Besen.", //has a broom.",
   "hat ein Auto.", //has a car.",
   "hat eine Schaufel.", //has a shovel.",

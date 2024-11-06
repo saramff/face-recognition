@@ -180,8 +180,8 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 const NAMES_PER_GENDER = 24
 
-const newMenNames = ["Franz", "Martin", "Uwe", "Georg", "Heinrich", "Stefan", "Christian", "Rudolf", "Kurt", "Hermann", "Johann", "Wilhelm", "Siegfried", "Rolf", "Joachim", "Alfred", "Rainer", "Egon", "Erhard", "Sebastian", "Jakob", "Marco", "Harry", "Eduard"];
-const newWomenNames = ["Lara", "Anna", "Johanna", "Elisa", "Mara", "Luna", "Thea", "Melina", "Isabella", "Paula", "Nora", "Elina", "Antonia", "Helena", "Victoria", "Sarah", "Lotta", "Merle", "Elena", "Maria", "Laura", "Romy", "Tilda", "Hailey"];
+const newMenNames = ["Peter", "Philipp", "Michael", "Felix", "David", "Thomas", "Max", "Jonathan", "Paul", "Valentin", "Viktor", "Andreas", "Manuel", "Martin", "Kai", "Konstantin", "Marius", "Simon", "Frank", "Bernd", "Karl", "Robin", "Jörg", "Ralf", "Moritz", "Hendrik", "Frederik", "Lukas", "Alexander", "Ulrich", "Markus", "Matthias", "Jakob", "Paul", "Oskar", "Raphael", "Gabriel", "Ruben", "Adrian", "Aaron", " Björn", "Friedrich", "Fabian", "Julian", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Gereon", "Udo", "Holger", "Albert", "Ludwig", "Joel", "Dominik", "Ben", "Elias", "Jonas", "Oliver", "Christoph", "Patrick", "Axel", "Noah", "Tim", "Benedikt", "Heiko", "Daniel", "Sven", "Bruno", "Kilian", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", " Olaf", "Emil", "Guido", "Leon", "Tristan", "Marcel", "Florian", "Leonard", "Theodor", "Rene", "Artur", "Sebastian", "Karsten", "Clemens"];
+const newWomenNames = ["Lena", "Lisa", "Laura", "Franziska", "Emma", "Hannah", "Lea", "Ella", "Sarah", "Johanna", "Marie", "Viktoria", "Carolin", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Ariane", "Ida", "Frieda", "Michaela", "Charlotte", "Daniela", "Neele", "Helena", "Verena", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara ", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Janina", "Nicole", "Marlene", "Antonia", "Beate", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Christina", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Claudia", "Marla", "Dorothea", "Malou", "Livia", "Ronja", "Ayla", "Rebecca", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Magdalena", "Sina", "Iris", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Jessica", "Yara", "Selma"];
 const newNames = [...newMenNames, ...newWomenNames];
 
 const newNamesWithResponse = newNames.map((name) => {
@@ -218,6 +218,7 @@ let timeline = [];
 //                           Consent                                  //
 //                           (!works only on server)                  //  
 ////////////////////////////////////////////////////////////////////////
+
 let check_consent = (elem) => {
   if (document.getElementById('consent_checkbox').checked) {
     return true;
@@ -245,7 +246,7 @@ timeline.push(html_block_consent);
 timeline.push({
   type: jsPsychFullscreen,
   fullscreen_mode: true,
-  message: '<p>Bitte Klicken, um zum Vollbildmodus zu wechseln.</p>',
+  message: '<p>Bitte klicken Sie, um zum Vollbildmodus zu wechseln.</p>',
   button_label:'Weiter',
   on_finish: function(data){
     var help_fullscreen = data.success;
@@ -255,10 +256,10 @@ timeline.push({
 
 var age = {
   type: jsPsychSurveyText,
-  preamble: 'Im folgenden fragen wir Sie nach einigen demographischen Daten.',
+  preamble: 'Im Folgenden fragen wir Sie nach einigen demographischen Daten.',
   name: 'age',
     button_label:'Weiter',
-    questions: [{prompt:'<div>Wie alt sind Sie derzeit?<\div>', rows: 1, columns: 2, required: 'true'}],
+    questions: [{prompt:'<div>Wie alt sind Sie?<\div>', rows: 1, columns: 2, required: 'true'}],
   data: {
     type:"demo",
     age: age,
@@ -311,7 +312,7 @@ var demo2 = {
 };
 timeline.push(demo2);
 
-/************************************************************************************************ */
+// /************************************************************************************************ */
 
 /* Preload images */
 let preload = {
@@ -353,14 +354,14 @@ let welcome = {
 timeline.push(welcome);
 
 
-/**************************************************************************************/
+// /**************************************************************************************/
 
 /* Instructions trial */
 let instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>In diesem Experiment werden nacheinander automatisch Gesichter angezeigt.</p>
-    <p>Bitte achte genau auf jedes Gesicht und seinen Namen.</p>
+    <p>In diesem Experiment werden nacheinander automatisch verschiedene Gesichter angezeigt.</p>
+    <p>Bitte achte genau auf jedes Gesicht und den dazugehörigen Namen.</p>
     <p>Du musst nichts tun. Die Gesichter erscheinen von selbst und du brauchst nichts weiter zu tun, außer aufmerksam zu sein.</p>
     <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
   `,
@@ -404,7 +405,7 @@ let instructionsrecognition = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
-    <p>Drücke '${correctKey.toUpperCase()}', wenn der Satz falsch ist, und '${incorrectKey.toUpperCase()}', wenn der Satz richtig ist.</p>
+    <p>Drücke '${incorrectKey.toUpperCase()}', wenn der Satz falsch ist, und '${correctKey.toUpperCase()}', wenn der Satz richtig ist.</p>
     </p></p>
     <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke '${incorrectKey.toUpperCase()}' (NEIN).</p>
     <br />
@@ -441,13 +442,13 @@ let testObjects = {
   data: {
     task: "response object presentation",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
@@ -526,13 +527,13 @@ let testFaces = {
   data: {
     task: "response faces test",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
@@ -579,13 +580,13 @@ let testNames = {
   data: {
     task: "response name test",
     correct_response: jsPsych.timelineVariable("correct_response"),
-    correct_response_meaning: correctKey === jsPsych.timelineVariable("correct_response") ? "YES" : "NO"
   },
   on_finish: function (data) {
     data.correct = jsPsych.pluginAPI.compareKeys(
       data.response,
       data.correct_response
     );
+    data.correct_response_meaning = correctKey === data.correct_response ? "YES" : "NO";
   },
 };
 
