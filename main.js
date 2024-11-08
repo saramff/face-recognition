@@ -41,8 +41,8 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 // Create name arrays for men and women
-const menNames = ["Peter", "Wolfgang", "Michael", "Werner", "Klaus", "Thomas", "Manfred", "Helmut", "Jürgen", "Heinz", "Gerhard", "Andreas", "Hans", "Josef", "Günter", "Dieter", "Horst", "Walter", "Frank", "Bernd", "Karl", "Herbert", "Jörg", "Ralf", "Erich", "Norbert", "Bernhard", "Willi", "Alexander", "Ulrich", "Markus", "Matthias", "Harald", "Paul", "Roland", "Ernst", "Reinhard", "Günther", "Gerd", "Fritz", "Otto", "Friedrich", "Erwin", "Lothar", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Hubert", "Udo", "Holger", "Albert", "Ludwig", "Dietmar", "Hartmut", "Reinhold", "Adolf", "Detlef", "Oliver", "Christoph", "Stephan", "Axel", "Reiner", "Alois", "Eberhard", "Heiko", "Daniel", "Sven", "Bruno", "Olaf", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", "Theo", "Emil", "Guido", "Arno", "Marc", "Gustav", "Florian", "Dietrich", "Theodor", "Rene", "Artur", "August", "Edmund", "Arnold"];
-const womenNames = ["Emilia", "Mia", "Sophia", "Mila", "Emma", "Hannah", "Lea", "Ella", "Lina", "Clar", "Marie", "Leni", "Lia", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Amelie", "Ida", "Frieda", "Mira", "Charlotte", "Malia", "Neele", "Sophie", "Juna", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Amelia", "Malea", "Marlene", "Mina", "Malina", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Maila", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Emelie", "Marla", "Melissa", "Malou", "Livia", "Ronja", "Ayla", "Emm", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Marleen", "Sina", "Frida", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Alissa", "Yara", "Selma"];
+const menNames = ["Peter", "Philipp", "Michael", "Felix", "David", "Thomas", "Max", "Jonathan", "Paul", "Valentin", "Viktor", "Andreas", "Manuel", "Martin", "Kai", "Konstantin", "Marius", "Simon", "Frank", "Bernd", "Karl", "Robin", "J&ouml;rg", "Ralf", "Moritz", "Hendrik", "Frederik", "Lukas", "Alexander", "Ulrich", "Markus", "Matthias", "Jakob", "Paul", "Oskar", "Raphael", "Gabriel", "Ruben", "Adrian", "Aaron", "Bj&ouml;rn", "Friedrich", "Fabian", "Julian", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Gereon", "Udo", "Holger", "Albert", "Ludwig", "Joel", "Dominik", "Ben", "Elias", "Jonas", "Oliver", "Christoph", "Patrick", "Axel", "Noah", "Tim", "Benedikt", "Heiko", "Daniel", "Sven", "Bruno", "Kilian", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", "Olaf", "Emil", "Guido", "Leon", "Tristan", "Marcel", "Florian", "Leonard", "Theodor", "Ren&eacute;", "Artur", "Sebastian", "Karsten", "Clemens"];
+const womenNames = ["Lena", "Lisa", "Sophia", "Laura", "Emma", "Hannah", "Lea", "Ella", "Franziska", "Beate", "Marie", "Sarah", "Johanna", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Viktoria", "Ida", "Frieda", "Carolin", "Charlotte", "Ariane", "Neele", "Claudia", "Christina", "Eva", "Carla", "Valentina", "Zoe", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Ariane", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Michaela", "Beate", "Marlene", "Daniela", "Helena", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Verena", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Janina", "Marla", "Nicole", "Malou", "Livia", "Ronja", "Ayla", "Kerstin", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Nora", "Sina", "Frida", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Antonia", "Yara", "Selma"];
 
 // Create suffle function - suffles array index randomly
 function shuffle(array) {
@@ -180,8 +180,8 @@ const recognitionFacesImgs = recognitionFaces.map((face) => face.img);
 
 const NAMES_PER_GENDER = 24
 
-const newMenNames = ["Peter", "Philipp", "Michael", "Felix", "David", "Thomas", "Max", "Jonathan", "Paul", "Valentin", "Viktor", "Andreas", "Manuel", "Martin", "Kai", "Konstantin", "Marius", "Simon", "Frank", "Bernd", "Karl", "Robin", "Jörg", "Ralf", "Moritz", "Hendrik", "Frederik", "Lukas", "Alexander", "Ulrich", "Markus", "Matthias", "Jakob", "Paul", "Oskar", "Raphael", "Gabriel", "Ruben", "Adrian", "Aaron", " Björn", "Friedrich", "Fabian", "Julian", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Gereon", "Udo", "Holger", "Albert", "Ludwig", "Joel", "Dominik", "Ben", "Elias", "Jonas", "Oliver", "Christoph", "Patrick", "Axel", "Noah", "Tim", "Benedikt", "Heiko", "Daniel", "Sven", "Bruno", "Kilian", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", " Olaf", "Emil", "Guido", "Leon", "Tristan", "Marcel", "Florian", "Leonard", "Theodor", "Rene", "Artur", "Sebastian", "Karsten", "Clemens"];
-const newWomenNames = ["Lena", "Lisa", "Laura", "Franziska", "Emma", "Hannah", "Lea", "Ella", "Sarah", "Johanna", "Marie", "Viktoria", "Carolin", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Ariane", "Ida", "Frieda", "Michaela", "Charlotte", "Daniela", "Neele", "Helena", "Verena", "Eva", "Carla", "Valentina", "Zoé", "Isabel", "Alina", "Lotte", "Julia", "Klara ", "Rosalie", "Amira", "Amalia", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Janina", "Nicole", "Marlene", "Antonia", "Beate", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Christina", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Claudia", "Marla", "Dorothea", "Malou", "Livia", "Ronja", "Ayla", "Rebecca", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Magdalena", "Sina", "Iris", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Jessica", "Yara", "Selma"];
+const newMenNames = ["Holger", "Alexander", "Fritz", "Otto", "Erwin", "Hubert", "Dietmar", "Jonas", "Gustav", "Clemens", "Gregor", "Lorenz", "Axel", "Lukas", "Samuel", "Timo", "Thilo", "Elian", "Silas", "Marcel", "Arian", "Jakob", "Florin", "Udo"];
+const newWomenNames = ["Vanessa", "Judith", "Kerstin", "Nora", "Patrizia", "Ramona", "Wiebke", "Yvonne", "Natalie", "Talia", "Chiara", "Romy", "Carlotta", "Samira", "Annelie", "Fenna", "Nayla", "Noemi", "Emira", "Tessa", "Lavinia", "Celina", "Elyse", "Neva"];
 const newNames = [...newMenNames, ...newWomenNames];
 
 const newNamesWithResponse = newNames.map((name) => {
@@ -361,9 +361,9 @@ let instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>In diesem Experiment werden nacheinander automatisch verschiedene Gesichter angezeigt.</p>
-    <p>Bitte achte genau auf jedes Gesicht und den dazugehörigen Namen.</p>
-    <p>Du musst nichts tun. Die Gesichter erscheinen von selbst und du brauchst nichts weiter zu tun, außer aufmerksam zu sein.</p>
-    <p>Drücke eine beliebige Taste, um zu beginnen, wenn du bereit bist.</p>
+    <p>Bitte achten Sie genau auf jedes Gesicht und den dazugehörigen Namen.</p>
+    <p>Die Gesichter erscheinen von selbst und Sie brauchen nichts weiter zu tun, außer aufmerksam zu sein.</p>
+    <p>Drücken Sie eine beliebige Taste, um zu beginnen, wenn Sie bereit sind.</p>
   `,
   post_trial_gap: 500,
 };
@@ -404,17 +404,17 @@ timeline.push(test_procedure);
 let instructionsrecognition = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Nun wirst du eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
-    <p>Drücke '${incorrectKey.toUpperCase()}', wenn der Satz falsch ist, und '${correctKey.toUpperCase()}', wenn der Satz richtig ist.</p>
+    <p>Nun werden Sie eine Reihe von Gesichtern mit einem Objekt und einem dazugehörigen Satz sehen.</p>
+    <p>Drücken Sie '${incorrectKey.toUpperCase()}', wenn der Satz falsch ist, und '${correctKey.toUpperCase()}', wenn der Satz richtig ist.</p>
     </p></p>
-    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücke '${incorrectKey.toUpperCase()}' (NEIN).</p>
+    <p>Wie in diesem Beispiel: Wenn auf dem Bildschirm Anas Gesicht und ein Teddybär erscheinen und der Satz lautet 'Ana hat einen Stift', drücken Sie '${incorrectKey.toUpperCase()}' (NEIN).</p>
     <br />
     <div>
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Ana.jpg'  class="img-instructions" />
       <img src='https://raw.githubusercontent.com/saramff/face-recognition-images/refs/heads/master/Example/Teddy.jpg' class="img-instructions" />
     </div>
     <br />
-    <p>Drücke eine beliebige Taste, um zu beginnen.</p>
+    <p>Drücken Sie eine beliebige Taste, um zu beginnen.</p>
   `,
   post_trial_gap: 500,
 };
@@ -423,16 +423,31 @@ timeline.push(instructionsrecognition);
 /* Create stimuli array for object presentation */
 let test_objects_stimuli = peopleSlice.map((person) => {
   return {
-    stimulus: `
+    noFaceStimulus: `
+      <p class="person-name">Dies ist ${person.name}</p>
       <div class="imgs-container">
         <img class="person-img" src="${person.img}">
-        <img class="object-img" src="${person.object.img}">
       </div>
-      <p class="person-name">${person.name} ${person.object.sentence}</p>
     `,
+    stimulus: `
+    <p class="person-name">Dies ist ${person.name}</p>
+    <div class="imgs-container">
+      <img class="person-img" src="${person.img}">
+      <img class="object-img" src="${person.object.img}">
+    </div>
+    <p class="person-name">${person.name} ${person.object.sentence}</p>
+  `,
     correct_response: person.object.correct_response
   };
 });
+
+/* Only Face trial */
+let onlyFace = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable("noFaceStimulus"),
+  choices: "NO_KEYS", // Prevent key press
+  trial_duration: 2000, // Only Face duration
+};
 
 /* Object presentation trial */
 let testObjects = {
@@ -454,7 +469,7 @@ let testObjects = {
 
 /* Test procedure: fixation + object presentation */
 let test_objects_procedure = {
-  timeline: [fixation, testObjects],
+  timeline: [fixation, onlyFace, testObjects],
   timeline_variables: test_objects_stimuli,
   randomize_order: true, // Randomize object order
 };
@@ -467,12 +482,12 @@ timeline.push(test_objects_procedure);
 let instructionstetris = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Jetzt wirst du für etwa 20 Minuten Tetris spielen.</p>
-    <p>Benutze die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
+    <p>Jetzt werden Sie für etwa 20 Minuten Tetris spielen.</p>
+    <p>Benutzen Sie die Pfeiltasten auf der Tastatur, um die Teile zu bewegen.</p>
     </p></p>
-    <p>Drücke die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicke auf 'Play', um das Spiel zu starten.</p>
-    <p>Wenn du verlierst, wähle 'Try again', um das Spiel neu zu starten. Du wirst auf diese Weise spielen, bis die Zeit abläuft.</p>
-    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+    <p>Drücken Sie die Leertaste, um zu beginnen. Wenn der Spielbildschirm erscheint, klicken Sie auf 'Play', um das Spiel zu starten.</p>
+    <p>Wenn Sie verlieren, wählen Sie 'Try again', um das Spiel neu zu starten. Sie werden auf diese Weise spielen, bis die Zeit abläuft.</p>
+    <p>Drücken Sie eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,
 };
@@ -486,7 +501,7 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 1200000, 
+  trial_duration: 200, 
 };
 timeline.push(tetris);
 
@@ -497,11 +512,11 @@ timeline.push(tetris);
 let instructionsFacesPresentation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Als Nächstes wirst du eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
+    <p>Als Nächstes werden Sie eine Reihe von Gesichtern auf dem Bildschirm sehen.</p>
     </p></p>
-    <p>Wenn du das Gesicht zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
-    <p>Wenn du das Gesicht nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
-    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+    <p>Wenn Sie das Gesicht zuvor gesehen haben, drücken Sie '${correctKey.toUpperCase()}' (ja).</p>
+    <p>Wenn Sie das Gesicht nicht gesehen haben, drücken Sie '${incorrectKey.toUpperCase()}' (nein).</p>
+    <p>Drücken Sie eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,
 };
@@ -552,11 +567,11 @@ timeline.push(test_faces_procedure);
 let instructionsNamePresentation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>Als Nächstes wirst du eine Reihe von Namen auf dem Bildschirm sehen.</p>
+    <p>Als Nächstes werden Sie eine Reihe von Namen auf dem Bildschirm sehen.</p>
     </p></p>
-    <p>Wenn du das Namen zuvor gesehen hast, drücke '${correctKey.toUpperCase()}' (ja).</p>
-    <p>Wenn du das Namen nicht gesehen hast, drücke '${incorrectKey.toUpperCase()}' (nein).</p>
-    <p>Drücke eine beliebige Taste, um zu beginnen.<p>
+    <p>Wenn Sie den Namen zuvor gesehen haben, drücken Sie '${correctKey.toUpperCase()}' (ja).</p>
+    <p>Wenn Sie den Namen nicht gesehen haben, drücken Sie '${incorrectKey.toUpperCase()}' (nein).</p>
+    <p>Drücken Sie eine beliebige Taste, um zu beginnen.<p>
   `,
   post_trial_gap: 500,
 };
@@ -632,7 +647,7 @@ timeline.push(save_data_block)
 var verguetungsfrage = {
   type: jsPsychHtmlButtonResponse,
   stimulus: '<div class="custom-style">Sie haben das Ende der Studie erreicht. Vielen Dank, dass Sie teilgenommen haben. Welche Verg&uumltung m&oumlchten Sie f&uumlr dieses Experiment?</div>',
-  choices: ['<div style="font-size:24px;">VP-Stunde (1/2)', '<div style="font-size:24px;">Gewinnspiel</div>'],
+  choices: ['<div style="font-size:24px;">VP-Stunde (1)', '<div style="font-size:24px;">Gewinnspiel</div>'],
   on_finish: function(data) {
     if(data.response == 0) {
         window.location.href = 'verguetung_b.html';
