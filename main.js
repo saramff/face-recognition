@@ -41,8 +41,8 @@ const womenImages = Array.from(
 const peopleImages = [...menImages, ...womenImages];
 
 // Create name arrays for men and women
-const menNames = ["Peter", "Philipp", "Michael", "Felix", "David", "Thomas", "Max", "Jonathan", "Paul", "Valentin", "Viktor", "Andreas", "Manuel", "Martin", "Kai", "Konstantin", "Marius", "Simon", "Frank", "Bernd", "Karl", "Robin", "J&ouml;rg", "Ralf", "Moritz", "Hendrik", "Frederik", "Lukas", "Alexander", "Ulrich", "Markus", "Matthias", "Jakob", "Paul", "Oskar", "Raphael", "Gabriel", "Ruben", "Adrian", "Aaron", "Bj&ouml;rn", "Friedrich", "Fabian", "Julian", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Gereon", "Udo", "Holger", "Albert", "Ludwig", "Joel", "Dominik", "Ben", "Elias", "Jonas", "Oliver", "Christoph", "Patrick", "Axel", "Noah", "Tim", "Benedikt", "Heiko", "Daniel", "Sven", "Bruno", "Kilian", "Mario", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", "Olaf", "Emil", "Guido", "Leon", "Tristan", "Marcel", "Florian", "Leonard", "Theodor", "Ren&eacute;", "Artur", "Sebastian", "Karsten", "Clemens"];
-const womenNames = ["Lena", "Lisa", "Sophia", "Laura", "Emma", "Hannah", "Lea", "Ella", "Franziska", "Beate", "Marie", "Sarah", "Johanna", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Viktoria", "Ida", "Frieda", "Carolin", "Charlotte", "Ariane", "Neele", "Claudia", "Christina", "Eva", "Carla", "Valentina", "Zoe", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Ariane", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Michaela", "Beate", "Marlene", "Daniela", "Helena", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Verena", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Janina", "Marla", "Nicole", "Malou", "Livia", "Ronja", "Ayla", "Kerstin", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Nora", "Sina", "Frida", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Antonia", "Yara", "Selma"];
+const menNames = ["Peter", "Philipp", "Michael", "Felix", "David", "Thomas", "Max", "Jonathan", "Paul", "Valentin", "Viktor", "Andreas", "Manuel", "Martin", "Kai", "Konstantin", "Marius", "Simon", "Frank", "Bernd", "Karl", "Robin", "J&ouml;rg", "Ralf", "Moritz", "Hendrik", "Frederik", "Lukas", "Alexander", "Ulrich", "Markus", "Matthias", "Jakob", "Paul", "Oskar", "Raphael", "Gabriel", "Ruben", "Adrian", "Aaron", "Bj&ouml;rn", "Friedrich", "Fabian", "Julian", "Robert", "Dirk", "Johannes", "Volker", "Richard", "Anton", "Jens", "Gereon", "Udo", "Holger", "Albert", "Ludwig", "Joel", "Dominik", "Ben", "Elias", "Jonas", "Oliver", "Christoph", "Patrick", "Axel", "Noah", "Tim", "Benedikt", "Heiko", "Daniel", "Sven", "Bruno", "Kilian", "Rolf", "Konrad", "Steffen", "Ingo", "Jochen", "Thorsten", "Eugen", "Achim", "Tobias", "Olaf", "Emil", "Guido", "Leon", "Tristan", "Marcel", "Florian", "Leonard", "Theodor", "Ren&eacute;", "Artur", "Sebastian", "Karsten", "Clemens"];
+const womenNames = ["Lena", "Lisa", "Sophia", "Laura", "Emma", "Hannah", "Lea", "Ella", "Franziska", "Beate", "Marie", "Sarah", "Johanna", "Leonie", "Mathilda", "Louisa", "Maja", "Lilly", "Viktoria", "Ida", "Frieda", "Carolin", "Charlotte", "Ariane", "Neele", "Claudia", "Christina", "Eva", "Carla", "Valentina", "Zoe", "Isabel", "Alina", "Lotte", "Julia", "Klara", "Rosalie", "Amira", "Ariane", "Olivia", "Liana", "Paulina", "Annie", "Stella", "Josephine", "Fiona", "Michaela", "Beate", "Marlene", "Daniela", "Helena", "Elisabeth", "Marta", "Pia", "Lucie", "Karlotta", "Jasmin", "Verena", "Aurelia", "Finja", "Freya", "Alma", "Elly", "Janina", "Marla", "Nicole", "Malou", "Livia", "Ronja", "Ayla", "Kerstin", "Leila", "Annika", "Greta", "Henni", "Katharina", "Annalena", "Anja", "Anouk", "Viola", "Theresa", "Nora", "Sina", "Frauke", "Veronika", "Bianca", "Sabrina", "Carina", "Tabea", "Fabienne", "Svenja", "Nadine", "Celine", "Antonia", "Yara", "Selma"];
 
 // Create suffle function - suffles array index randomly
 function shuffle(array) {
@@ -238,9 +238,9 @@ let html_block_consent = {
 };
 timeline.push(html_block_consent);
 
-// ////////////////////////////////////////////////////////////////////////
-// //                           Demographic  variables                   //
-// ////////////////////////////////////////////////////////////////////////
+// // ////////////////////////////////////////////////////////////////////////
+// // //                           Demographic  variables                   //
+// // ////////////////////////////////////////////////////////////////////////
 
 /* fullscreen */
 timeline.push({
@@ -424,18 +424,22 @@ timeline.push(instructionsrecognition);
 let test_objects_stimuli = peopleSlice.map((person) => {
   return {
     noFaceStimulus: `
-      <p class="person-name">Dies ist ${person.name}</p>
+      <p class="person-name">Dies ist ${person.name}.</p>
       <div class="imgs-container">
         <img class="person-img" src="${person.img}">
       </div>
     `,
     stimulus: `
-    <p class="person-name">Dies ist ${person.name}</p>
+    <p class="person-name">Dies ist ${person.name}.</p>
     <div class="imgs-container">
       <img class="person-img" src="${person.img}">
       <img class="object-img" src="${person.object.img}">
     </div>
     <p class="person-name">${person.name} ${person.object.sentence}</p>
+    <div class="keys">
+      <p class="${correctKey === 'a' ? 'left' : 'right'}">JA</p>
+      <p class="${correctKey === 'a' ? 'right' : 'left'}">NEIN</p>
+    </div>
   `,
     correct_response: person.object.correct_response
   };
@@ -501,7 +505,7 @@ let tetris = {
   `,
   post_trial_gap: 500,
   choices: "NO_KEYS", // Prevent key press
-  trial_duration: 200, 
+  trial_duration: 1200000, 
 };
 timeline.push(tetris);
 
@@ -528,6 +532,10 @@ let face_recognition_stimuli = recognitionFaces.map((face) => {
     stimulus: `
       <div class="imgs-container">
         <img class="person-img" src="${face.img}">
+      </div>
+      <div class="keys">
+        <p class="${correctKey === 'a' ? 'left' : 'right'}">JA</p>
+        <p class="${correctKey === 'a' ? 'right' : 'left'}">NEIN</p>
       </div>
     `,
     correct_response: face.correct_response
@@ -582,6 +590,10 @@ let name_recognition_stimuli = allNames.map((name) => {
   return {
     stimulus: `
       <h2 class="names-experiment">${name.name}</h2>
+      <div class="keys">
+        <p class="${correctKey === 'a' ? 'left' : 'right'}">JA</p>
+        <p class="${correctKey === 'a' ? 'right' : 'left'}">NEIN</p>
+      </div>
     `,
     correct_response: name.correct_response
   };
